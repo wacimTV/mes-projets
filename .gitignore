@@ -1,0 +1,25 @@
+# Dependencies
+**/node_modules/
+
+# Next.js / Vite build outputs
+**/.next/
+**/out/
+**/dist/
+**/.nuxt/
+
+# Environment variables (NE JAMAIS PUBLIER - contient les clés API)
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Misc
+**/.DS_Store
+**/*.pem
+**/tsconfig.tsbuildinfo
+**/.turbo/
+**/.vercel/
+
+# Logs
+**/npm-debug.log*
+**/yarn-debug.log*
+**/pnpm-debug.log*
