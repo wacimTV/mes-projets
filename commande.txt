@@ -1,0 +1,14 @@
+Pour sauvegarder tes modifs au quotidien :
+
+git add -A
+git commit -m "ce que tu as modifié"
+git push
+
+Pour récupérer sur un autre appareil : 
+
+git clone https://github.com/wacimTV/mes-projets.git
+
+
+Puis dans chaque projet faire npm install et recréer le .env.local avec ta clé Resend.
+
+
