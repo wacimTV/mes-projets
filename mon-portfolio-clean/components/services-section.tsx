@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef, useState } from "react"
-import { Code, Palette, Smartphone, Zap, ArrowRight } from "lucide-react"
+import { Code, Palette, Smartphone, Zap, ArrowRight, FileImage } from "lucide-react"
 
 const services = [
   {
@@ -23,6 +23,12 @@ const services = [
     title: "Prise de commandes en ligne",
     description: "Permettez à vos clients de commander directement depuis votre site web grâce à un système de commande simple, rapide et sécurisé. Idéal pour les restaurants, snacks, boulangeries, boucheries, commerces alimentaires et bien d'autres.",
     features: ["Commande en ligne 24h/24", "Paiement sécurisé par CB", "Gestion des produits et des stocks", "Notifications automatiques des commandes"],
+  },
+  {
+    icon: FileImage,
+    title: "Création de Flyers",
+    description: "Un flyer efficace ne se contente pas d'être beau — il capte l'attention, transmet votre message et incite à l'action. Je conçois des flyers imprimé et digitaux qui donnent envie d'être lus.",
+    features: ["Flyers promotionnels & événementiels", "Restaurants, commerces & services", "Print-ready + version numérique", "Rendu professionnel, délai rapide"],
   },
 ]
 

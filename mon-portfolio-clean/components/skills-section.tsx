@@ -4,8 +4,7 @@ import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 
 const technologies = [
-
-
+  "Design Flyer",
 ]
 
 export function SkillsSection() {
