@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef, useState } from "react"
-import { Code, Palette, Smartphone, Zap, ArrowRight, FileImage } from "lucide-react"
+import { Code, Palette, Zap, ArrowRight, FileImage, Share2 } from "lucide-react"
 
 const services = [
   {
@@ -29,6 +29,13 @@ const services = [
     title: "Création de Flyers",
     description: "Un flyer efficace ne se contente pas d'être beau — il capte l'attention, transmet votre message et incite à l'action. Je conçois des flyers imprimé et digitaux qui donnent envie d'être lus.",
     features: ["Flyers promotionnels & événementiels", "Restaurants, commerces & services", "Print-ready + version numérique", "Rendu professionnel, délai rapide"],
+  },
+  {
+    icon: Share2,
+    title: "Communication Digitale",
+    description:
+      "Je vous aide à renforcer la présence en ligne de votre entreprise sur les réseaux sociaux et sur le web. De la stratégie à la publication, je prends en charge votre communication digitale pour toucher votre audience et booster votre visibilité.",
+    features: ["Gestion des réseaux sociaux", "Création de contenus visuels", "Stratégie de communication web", "Optimisation de la présence en ligne"],
   },
 ]
 
