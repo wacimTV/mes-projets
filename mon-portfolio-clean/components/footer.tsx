@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Github, Linkedin, Twitter, Dribbble, ArrowUp, Phone, Instagram } from "lucide-react";
+import { Linkedin, ArrowUp, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const footerLinks = [
@@ -18,9 +18,8 @@ const footerLinks = [
   {
     title: "Réseaux",
     links: [
-      { name: "GitHub", href: "https://github.com/wacimTV", icon: Github },
       { name: "LinkedIn", href: "https://www.linkedin.com/in/wacim-ammouche-4a20031b1/", icon: Linkedin },
-      { name: "Instagram", href: "https://www.instagram.com/wacim.11/?hl=fr#", icon: Instagram },
+      { name: "Instagram", href: "https://www.instagram.com/wacim.digital/?hl=fr", icon: Instagram },
     ],
   },
 ];

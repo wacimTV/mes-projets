@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react"
+import { ArrowDown, Instagram, Linkedin } from "lucide-react"
 import { useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { ParticleField } from "@/components/particle-field"
@@ -74,9 +74,8 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 2.3 }}
         >
           {[
-            { icon: Github, href: "https://github.com/wacimTV", label: "GitHub" },
-            { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-            { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/wacim-ammouche-4a20031b1/", label: "LinkedIn" },
+            { icon: Instagram, href: "https://www.instagram.com/wacim.digital/?hl=fr", label: "Instagram" },
           ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}

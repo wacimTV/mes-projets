@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef, useState } from "react"
-import { Code, Palette, Zap, ArrowRight, FileImage, Share2 } from "lucide-react"
+import { Code, Palette, Zap, ArrowRight, FileImage, Share2, Wifi } from "lucide-react"
 
 const services = [
   {
@@ -36,6 +36,14 @@ const services = [
     description:
       "Je vous aide à renforcer la présence en ligne de votre entreprise sur les réseaux sociaux et sur le web. De la stratégie à la publication, je prends en charge votre communication digitale pour toucher votre audience et booster votre visibilité.",
     features: ["Gestion des réseaux sociaux", "Création de contenus visuels", "Stratégie de communication web", "Optimisation de la présence en ligne"],
+  },
+  {
+    icon: Wifi,
+    title: "Carte NFC & QR Code — Avis Google",
+    price: "À partir de 50 € TTC",
+    description:
+      "Transformez chaque client satisfait en nouvel avis Google grâce à une carte NFC & QR Code simple, rapide et efficace. Idéal pour les commerces, restaurants, salons et artisans. Configuration, test et mise en service inclus.",
+    features: ["NFC + QR Code configurés sur votre fiche Google", "Installation & mise en service sur place", "Explications d’utilisation incluses", "Déplacement dans le 13 · Devis gratuit"],
   },
 ]
 
@@ -81,7 +89,12 @@ export function ServicesSection() {
                   <service.icon className="h-6 w-6 text-accent" />
                 </div>
 
-                <h3 className="mb-3 font-serif text-xl font-medium">{service.title}</h3>
+                <div className="mb-3 flex items-start justify-between gap-2">
+                  <h3 className="font-serif text-xl font-medium leading-snug">{service.title}</h3>
+                  {"price" in service && service.price && (
+                    <span className="shrink-0 rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold text-accent">{service.price}</span>
+                  )}
+                </div>
                 <p className="mb-4 text-sm text-muted-foreground">{service.description}</p>
 
                 <ul className="space-y-2">
