@@ -3,9 +3,17 @@ import { Resend } from "resend"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
+const escapeHtml = (s: string) =>
+  String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;")
+
 export async function POST(req: Request) {
   try {
-    const { name, email, subject, message } = await req.json()
+    const body = await req.json()
+    const { subject: rawSubject, message: rawMessage } = body
+    const name = escapeHtml(body.name ?? "")
+    const email = escapeHtml(body.email ?? "")
+    const subject = escapeHtml(rawSubject ?? "")
+    const message = escapeHtml(rawMessage ?? "")
 
     if (!name || !email || !subject || !message) {
       return NextResponse.json({ error: "Tous les champs sont requis." }, { status: 400 })
@@ -14,8 +22,8 @@ export async function POST(req: Request) {
     const { error } = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: ["w.ammouche13@gmail.com"],
-      subject: `[Portfolio] ${subject}`,
-      replyTo: email,
+      subject: `[Portfolio] ${String(rawSubject).replace(/[\r\n]+/g, " ")}`,
+      replyTo: String(body.email),
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; background: #f9fafb; border-radius: 12px;">
           <h2 style="color: #111827; margin-bottom: 24px;">Nouveau message de ton portfolio</h2>

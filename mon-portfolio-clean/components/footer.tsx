@@ -9,10 +9,11 @@ const footerLinks = [
   {
     title: "Navigation",
     links: [
-      { name: "À Propos", href: "#about" },
-      { name: "Projets", href: "#projects" },
-      { name: "Services", href: "#services" },
-      { name: "Contact", href: "#contact" },
+      { name: "À Propos", href: "/#about" },
+      { name: "Projets", href: "/#projects" },
+      { name: "Services", href: "/#services" },
+      { name: "Community Management", href: "/formules-reseaux-sociaux" },
+      { name: "Contact", href: "/#contact" },
     ],
   },
   {
@@ -44,7 +45,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <a
-              href="#"
+              href="/"
               className="font-serif text-2xl font-medium tracking-tight"
             >
               WA

@@ -7,10 +7,11 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 
 const navItems = [
-  { name: "À Propos", href: "#about" },
-  { name: "Projets", href: "#projects" },
-  { name: "Services", href: "#services" },
-  { name: "Contact", href: "#contact" },
+  { name: "À Propos", href: "/#about" },
+  { name: "Projets", href: "/#projects" },
+  { name: "Services", href: "/#services" },
+  { name: "Community Management", href: "/formules-reseaux-sociaux" },
+  { name: "Contact", href: "/#contact" },
 ]
 
 export function Navigation() {
@@ -42,7 +43,7 @@ export function Navigation() {
       <header className="fixed top-0 left-0 right-0 z-50 px-6 py-4 md:px-12">
         <nav className="mx-auto flex max-w-7xl items-center justify-between">
           <motion.a
-            href="#"
+            href="/"
             className="relative z-10 font-serif text-2xl font-medium tracking-tight"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}

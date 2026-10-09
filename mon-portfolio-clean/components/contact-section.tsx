@@ -215,7 +215,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <div className="mb-0.5 text-xs font-medium uppercase tracking-wider text-muted-foreground">Localisation</div>
-                  <span className="font-medium">Marseille et les villes aux alentours</span>
+                  <span className="font-medium">Marseille</span>
                 </div>
               </motion.div>
 
