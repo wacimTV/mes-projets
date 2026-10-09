@@ -106,7 +106,7 @@ export function QuoteDialog({ open, onOpenChange, formula, onFormulaChange }: Pr
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="dark sp-root max-h-[92dvh] overflow-y-auto border-[var(--sp-gold-line)] sm:max-w-xl">
+      <DialogContent className="sp-root max-h-[92dvh] overflow-y-auto border-[var(--sp-gold-line)] sm:max-w-xl">
         {sent ? (
           <div className="flex flex-col items-center py-8 text-center" role="status">
             <span className="sp-icon mb-4 !h-16 !w-16 !rounded-full">

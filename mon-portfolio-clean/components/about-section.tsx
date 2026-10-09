@@ -11,6 +11,12 @@ const stats = [
 
 const experiences = [
   {
+    period: "Actuellement",
+    role: "Créateur de sites web et communication digitale",
+    company: "Indépendant",
+    description: "Création de sites web pour des clients et accompagnement des entreprises dans leur communication sur les réseaux sociaux.",
+  },
+  {
     period: "2026 — actuel",
     role: "BTS CCST, conseil et commercialisation de solutions techniques",
     company: "Lycée rempart",
@@ -28,6 +34,42 @@ const experiences = [
     role: "Développeur Web & Mobile Full-Stack",
     company: "Indépendant",
     description: "Conception et développement de sites web et d'applications mobiles iOS & Android.",
+  },
+  {
+    period: "2026",
+    role: "Missions d'intérim",
+    company: "Haribo (Beaucaire) · Aéroport de Vatry",
+    description: "Missions d'intérim à l'usine Haribo de Beaucaire et à l'aéroport de Vatry.",
+  },
+  {
+    period: "2026",
+    role: "Stage",
+    company: "Rexel · Arles",
+    description: "Stage en entreprise chez Rexel, à Arles.",
+  },
+  {
+    period: "2025",
+    role: "Équipier polyvalent",
+    company: "McDonald's",
+    description: "Poste d'équipier polyvalent en restauration rapide.",
+  },
+  {
+    period: "Juillet — août 2025",
+    role: "Animateur en centre aéré",
+    company: "Centre aéré",
+    description: "Animation auprès des enfants pendant la période estivale.",
+  },
+  {
+    period: "2024",
+    role: "Vendeur en marché alimentaire",
+    company: "Arles",
+    description: "Vente de produits alimentaires sur un marché, à Arles.",
+  },
+  {
+    period: "Décembre 2022",
+    role: "Stage",
+    company: "LERM",
+    description: "Stage en entreprise au sein du LERM.",
   },
 ]
 
@@ -88,7 +130,7 @@ export function AboutSection() {
             <div className="space-y-8">
               {experiences.map((exp, i) => (
                 <motion.div
-                  key={exp.role}
+                  key={`${exp.role}-${exp.company}`}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.3 + i * 0.1 }}

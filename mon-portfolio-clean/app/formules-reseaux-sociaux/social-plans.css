@@ -1,33 +1,56 @@
 /*
  * Thème noir & doré, limité à la page « Formules réseaux sociaux ».
- * Le wrapper `.dark.sp-root` surcharge les variables du thème (accent, fond, bordures)
+ * Le wrapper `.sp-root` surcharge les variables du thème (accent, fond, bordures) en mode
+ * jour et, via `.dark .sp-root`, en mode nuit. Il suit donc le sélecteur de thème du site.
  * pour la page, la navigation, le pied de page et la boîte de dialogue du devis,
  * sans modifier le reste du site.
  */
-.dark.sp-root {
-  --sp-gold: oklch(0.8 0.125 85);
-  --sp-gold-soft: oklch(0.8 0.125 85 / 0.14);
-  --sp-gold-line: oklch(0.8 0.125 85 / 0.35);
-  --background: oklch(0.1 0.003 85);
-  --foreground: oklch(0.97 0.004 85);
-  --card: oklch(0.14 0.005 85);
-  --card-foreground: oklch(0.97 0.004 85);
-  --popover: oklch(0.14 0.005 85);
-  --secondary: oklch(0.17 0.006 85);
-  --muted: oklch(0.2 0.006 85);
-  --muted-foreground: oklch(0.76 0.01 85);
+.sp-root {
+  /* Mode jour (par defaut) : fond clair, or fonce pour un bon contraste */
+  --sp-g: 0.52 0.1 78;
+  --sp-gold: oklch(var(--sp-g));
+  --sp-gold-soft: oklch(var(--sp-g) / 0.1);
+  --sp-gold-line: oklch(var(--sp-g) / 0.4);
+  --sp-card-a: oklch(0.995 0.003 85);
+  --sp-card-b: oklch(0.97 0.008 85);
+  --sp-feat-a: oklch(0.985 0.02 85);
+  --sp-btn-text: oklch(0.99 0.003 85);
+  --background: oklch(0.985 0.004 85);
+  --foreground: oklch(0.16 0.01 85);
+  --card: oklch(0.995 0.003 85);
+  --secondary: oklch(0.96 0.008 85);
+  --muted: oklch(0.95 0.008 85);
+  --muted-foreground: oklch(0.42 0.015 85);
   --accent: var(--sp-gold);
-  --accent-foreground: oklch(0.14 0.01 85);
+  --accent-foreground: oklch(0.99 0.003 85);
   --ring: var(--sp-gold);
-  --border: oklch(0.8 0.125 85 / 0.22);
-  --input: oklch(0.8 0.125 85 / 0.28);
+  --border: oklch(var(--sp-g) / 0.28);
+  --input: oklch(var(--sp-g) / 0.4);
   background-color: var(--background);
   color: var(--foreground);
   overflow-x: clip;
 }
 
+/* Mode nuit : noir profond et or elegant (suit la classe .dark posee par le selecteur de theme) */
+.dark .sp-root {
+  --sp-g: 0.8 0.125 85;
+  --sp-card-a: oklch(0.16 0.006 85);
+  --sp-card-b: oklch(0.12 0.004 85);
+  --sp-feat-a: oklch(0.17 0.008 85);
+  --sp-btn-text: oklch(0.14 0.01 85);
+  --background: oklch(0.1 0.003 85);
+  --foreground: oklch(0.97 0.004 85);
+  --card: oklch(0.14 0.005 85);
+  --secondary: oklch(0.17 0.006 85);
+  --muted: oklch(0.2 0.006 85);
+  --muted-foreground: oklch(0.76 0.01 85);
+  --accent-foreground: oklch(0.14 0.01 85);
+  --border: oklch(var(--sp-g) / 0.22);
+  --input: oklch(var(--sp-g) / 0.28);
+}
+
 .sp-root ::selection {
-  background-color: oklch(0.8 0.125 85 / 0.35);
+  background-color: oklch(var(--sp-g) / 0.35);
 }
 
 .sp-container {
@@ -48,7 +71,7 @@
   .sp-section { padding-block: 7rem; }
 }
 .sp-section--alt {
-  background: linear-gradient(180deg, transparent, oklch(0.8 0.125 85 / 0.035), transparent);
+  background: linear-gradient(180deg, transparent, oklch(var(--sp-g) / 0.035), transparent);
 }
 
 .sp-eyebrow {
@@ -100,8 +123,8 @@
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(ellipse 60% 45% at 50% 0%, oklch(0.8 0.125 85 / 0.16), transparent 70%),
-    radial-gradient(ellipse 40% 30% at 85% 80%, oklch(0.8 0.125 85 / 0.06), transparent 70%);
+    radial-gradient(ellipse 60% 45% at 50% 0%, oklch(var(--sp-g) / 0.16), transparent 70%),
+    radial-gradient(ellipse 40% 30% at 85% 80%, oklch(var(--sp-g) / 0.06), transparent 70%);
 }
 .sp-hero h1 {
   font-family: var(--font-playfair), serif;
@@ -127,7 +150,7 @@
   padding: 0.45rem 0.95rem;
   font-size: 0.85rem;
   color: var(--foreground);
-  background: oklch(0.8 0.125 85 / 0.05);
+  background: oklch(var(--sp-g) / 0.05);
 }
 
 /* ── Buttons ──────────────────────────────────────────── */
@@ -152,11 +175,11 @@
 }
 .sp-btn--gold {
   background: var(--sp-gold);
-  color: oklch(0.14 0.01 85);
+  color: var(--sp-btn-text);
 }
 .sp-btn--gold:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px -8px oklch(0.8 0.125 85 / 0.6);
+  box-shadow: 0 8px 28px -8px oklch(var(--sp-g) / 0.6);
 }
 .sp-btn--ghost {
   background: transparent;
@@ -173,14 +196,14 @@
   position: relative;
   border: 1px solid var(--sp-gold-line);
   border-radius: 1rem;
-  background: linear-gradient(180deg, oklch(0.16 0.006 85), oklch(0.12 0.004 85));
+  background: linear-gradient(180deg, var(--sp-card-a), var(--sp-card-b));
   padding: 1.5rem;
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .sp-card:hover {
   transform: translateY(-4px);
   border-color: var(--sp-gold);
-  box-shadow: 0 18px 40px -24px oklch(0.8 0.125 85 / 0.45);
+  box-shadow: 0 18px 40px -24px oklch(var(--sp-g) / 0.45);
 }
 .sp-icon {
   display: inline-flex;
@@ -219,9 +242,9 @@
 .sp-plan--featured {
   border-color: var(--sp-gold);
   background:
-    radial-gradient(ellipse 80% 40% at 50% 0%, oklch(0.8 0.125 85 / 0.14), transparent 70%),
-    linear-gradient(180deg, oklch(0.17 0.008 85), oklch(0.12 0.004 85));
-  box-shadow: 0 0 0 1px oklch(0.8 0.125 85 / 0.25), 0 24px 60px -30px oklch(0.8 0.125 85 / 0.5);
+    radial-gradient(ellipse 80% 40% at 50% 0%, oklch(var(--sp-g) / 0.14), transparent 70%),
+    linear-gradient(180deg, var(--sp-feat-a), var(--sp-card-b));
+  box-shadow: 0 0 0 1px oklch(var(--sp-g) / 0.25), 0 24px 60px -30px oklch(var(--sp-g) / 0.5);
 }
 @media (min-width: 900px) {
   .sp-plan--featured { transform: translateY(-10px); }
@@ -239,7 +262,7 @@
   padding: 0.35rem 1rem;
   border-radius: 999px;
   background: var(--sp-gold);
-  color: oklch(0.14 0.01 85);
+  color: var(--sp-btn-text);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -321,7 +344,7 @@
   color: var(--sp-gold);
   font-family: var(--font-playfair), serif;
   font-size: 1.5rem;
-  box-shadow: 0 0 24px -6px oklch(0.8 0.125 85 / 0.5);
+  box-shadow: 0 0 24px -6px oklch(var(--sp-g) / 0.5);
 }
 
 /* ── Secteurs ─────────────────────────────────────────── */
@@ -371,7 +394,7 @@
 .sp-input:focus-visible {
   outline: none;
   border-color: var(--sp-gold);
-  box-shadow: 0 0 0 3px oklch(0.8 0.125 85 / 0.25);
+  box-shadow: 0 0 0 3px oklch(var(--sp-g) / 0.25);
 }
 .sp-input[aria-invalid="true"] { border-color: oklch(0.7 0.19 25); }
 .sp-error { color: oklch(0.75 0.17 25); font-size: 0.82rem; }

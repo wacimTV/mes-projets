@@ -51,7 +51,7 @@ export function SocialPlansPage() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className="dark sp-root min-h-screen">
+      <div className="sp-root min-h-screen">
         <Navigation />
         <main id="contenu">
           {/* ── 1. Hero ─────────────────────────────────────── */}
