@@ -3,7 +3,7 @@
 import type React from "react"
 import { useState } from "react"
 import { motion, MotionConfig } from "framer-motion"
-import { ArrowRight, Check, Instagram, Star, Video } from "lucide-react"
+import { ArrowRight, Check, Crown, Instagram, Star, Video } from "lucide-react"
 import {
   Accordion,
   AccordionContent,
@@ -100,11 +100,14 @@ export function SocialPlansPage() {
                 {plans.map((plan, i) => (
                   <Reveal key={plan.id} delay={i * 0.1} className="flex">
                     <article
-                      className={`sp-card sp-plan w-full ${plan.featured ? "sp-plan--featured" : ""}`}
+                      className={`sp-card sp-plan w-full ${plan.featured ? "sp-plan--featured" : ""} ${plan.id === "premium" ? "sp-plan--premium" : ""}`}
                       aria-labelledby={`plan-${plan.id}`}
                     >
                       {plan.featured && (
                         <span className="sp-badge"><Star className="h-3.5 w-3.5" aria-hidden="true" /> La plus populaire</span>
+                      )}
+                      {plan.id === "premium" && (
+                        <span className="sp-crest" aria-hidden="true"><Crown className="h-4 w-4" /></span>
                       )}
                       <h3 id={`plan-${plan.id}`} className="sp-plan-name">{plan.name}</h3>
                       <p className="sp-price">
@@ -122,10 +125,11 @@ export function SocialPlansPage() {
                       </ul>
                       <button
                         type="button"
-                        className={`sp-btn w-full ${plan.featured ? "sp-btn--gold" : "sp-btn--ghost"}`}
+                        className={`sp-btn w-full ${plan.featured || plan.id === "premium" ? "sp-btn--gold" : "sp-btn--ghost"} ${plan.id === "premium" ? "sp-btn--premium" : ""}`}
                         onClick={() => openQuote(plan.id)}
                       >
                         {plan.cta}
+                        {plan.id === "premium" && <ArrowRight className="sp-btn-arrow h-4 w-4" aria-hidden="true" />}
                       </button>
                     </article>
                   </Reveal>

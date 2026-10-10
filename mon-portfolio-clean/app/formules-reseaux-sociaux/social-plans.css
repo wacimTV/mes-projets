@@ -309,6 +309,153 @@
 }
 .sp-features svg { color: var(--sp-gold); flex-shrink: 0; margin-top: 0.2rem; }
 
+/* ── Formule Premium : finition haut de gamme (carte Premium uniquement) ── */
+.sp-plan--premium {
+  isolation: isolate;
+  padding: 2.75rem 1.75rem 2rem;
+  border-color: transparent;
+  background:
+    radial-gradient(ellipse 90% 45% at 50% 0%, oklch(var(--sp-g) / 0.2), transparent 72%),
+    radial-gradient(ellipse 60% 30% at 100% 100%, oklch(var(--sp-g) / 0.07), transparent 70%),
+    linear-gradient(180deg, var(--sp-feat-a), var(--sp-card-b));
+  box-shadow:
+    0 1px 0 oklch(var(--sp-g) / 0.35) inset,
+    0 30px 70px -36px oklch(var(--sp-g) / 0.55),
+    0 12px 24px -16px oklch(0 0 0 / 0.35);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+}
+@media (min-width: 1100px) {
+  .sp-plan--premium { padding: 3rem 2.25rem 2.25rem; }
+}
+/* Cadre extérieur : fin dégradé d'or (haut lumineux, bas discret) */
+.sp-plan--premium::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(160deg, var(--sp-gold), oklch(var(--sp-g) / 0.3) 45%, oklch(var(--sp-g) / 0.75));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  pointer-events: none;
+}
+/* Filet intérieur : effet d'encadrement façon papeterie de luxe */
+.sp-plan--premium::after {
+  content: "";
+  position: absolute;
+  inset: 0.5rem;
+  z-index: -1;
+  border: 1px solid oklch(var(--sp-g) / 0.22);
+  border-radius: calc(1rem - 0.5rem);
+  pointer-events: none;
+}
+.sp-plan--premium:hover {
+  border-color: transparent;
+  transform: translateY(-6px);
+  box-shadow:
+    0 1px 0 oklch(var(--sp-g) / 0.45) inset,
+    0 40px 80px -36px oklch(var(--sp-g) / 0.65),
+    0 12px 24px -16px oklch(0 0 0 / 0.35);
+}
+.sp-crest {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  border: 1px solid var(--sp-gold-line);
+  background: var(--sp-gold-soft);
+  color: var(--sp-gold);
+}
+.sp-plan--premium .sp-plan-name,
+.sp-plan--premium .sp-price,
+.sp-plan--premium > p { text-align: center; }
+.sp-plan--premium .sp-plan-name { letter-spacing: 0.28em; }
+.sp-plan--premium .sp-price { justify-content: center; margin-top: 1.1rem; }
+.sp-plan--premium .sp-price strong {
+  font-size: clamp(3rem, 5.4vw, 3.9rem);
+  letter-spacing: -0.02em;
+  background: linear-gradient(180deg, var(--sp-gold), oklch(var(--sp-g) / 0.72));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.sp-plan--premium .sp-price span {
+  flex-basis: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.sp-plan--premium .sp-features {
+  position: relative;
+  gap: 0;
+  margin: 1.75rem 0 2rem;
+  padding-top: 0.5rem;
+  border-top: 0;
+}
+.sp-plan--premium .sp-features::before {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, transparent, var(--sp-gold-line), transparent);
+}
+.sp-plan--premium .sp-features li {
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid oklch(var(--sp-g) / 0.12);
+}
+.sp-plan--premium .sp-features li:last-child { border-bottom: 0; }
+.sp-plan--premium .sp-features svg {
+  box-sizing: content-box;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: 0;
+  padding: 0.28rem;
+  border-radius: 50%;
+  border: 1px solid var(--sp-gold-line);
+  background: var(--sp-gold-soft);
+}
+/* Bouton Premium : reflet discret au survol, focus très lisible */
+.sp-btn--premium {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 3.25rem;
+  border-color: oklch(var(--sp-g) / 0.9);
+  background: linear-gradient(135deg, var(--sp-gold), oklch(var(--sp-g) / 0.8));
+  letter-spacing: 0.02em;
+}
+.sp-btn--premium::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(110deg, transparent 30%, oklch(1 0 0 / 0.28) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sp-btn--premium:hover::after { transform: translateX(120%); }
+.sp-btn--premium:hover { box-shadow: 0 14px 34px -12px oklch(var(--sp-g) / 0.7); }
+.sp-btn--premium:focus-visible {
+  outline: 2px solid var(--sp-gold);
+  outline-offset: 4px;
+}
+.sp-btn-arrow { transition: transform 0.3s ease; }
+.sp-btn--premium:hover .sp-btn-arrow { transform: translateX(4px); }
+@media (prefers-reduced-motion: reduce) {
+  .sp-plan--premium, .sp-btn--premium::after, .sp-btn-arrow { transition: none; }
+  .sp-plan--premium:hover, .sp-btn--premium:hover .sp-btn-arrow { transform: none; }
+  .sp-btn--premium:hover::after { transform: translateX(-120%); }
+}
+
 /* ── Timeline ─────────────────────────────────────────── */
 .sp-steps {
   position: relative;
