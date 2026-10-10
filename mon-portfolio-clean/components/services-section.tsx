@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef, useState } from "react"
+import Link from "next/link"
 import { Code, Palette, Zap, ArrowRight, FileImage, Share2, Wifi } from "lucide-react"
 
 const services = [
@@ -33,6 +34,8 @@ const services = [
   {
     icon: Share2,
     title: "Communication Digitale",
+    href: "/formules-reseaux-sociaux",
+    linkLabel: "Découvrir le community management",
     description:
       "Je vous aide à renforcer la présence en ligne de votre entreprise sur les réseaux sociaux et sur le web. De la stratégie à la publication, je prends en charge votre communication digitale pour toucher votre audience et booster votre visibilité.",
     features: ["Gestion des réseaux sociaux", "Création de contenus visuels", "Stratégie de communication web", "Optimisation de la présence en ligne"],
@@ -105,6 +108,16 @@ export function ServicesSection() {
                     </li>
                   ))}
                 </ul>
+
+                {"href" in service && service.href && (
+                  <Link
+                    href={service.href}
+                    className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[oklch(0.8_0.125_85)] px-5 py-3 text-sm font-semibold text-[oklch(0.14_0.01_85)] shadow-lg shadow-[oklch(0.8_0.125_85/0.35)] ring-1 ring-[oklch(0.8_0.125_85/0.6)] transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-[oklch(0.8_0.125_85/0.5)]"
+                  >
+                    {service.linkLabel}
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                )}
               </div>
             </motion.div>
           ))}
