@@ -10,7 +10,7 @@ const navItems = [
   { name: "À Propos", href: "/#about" },
   { name: "Projets", href: "/#projects" },
   { name: "Services", href: "/#services" },
-  { name: "Community Management", href: "/formules-reseaux-sociaux" },
+  { name: "Community Management", href: "/formules-reseaux-sociaux", highlight: true },
   { name: "Contact", href: "/#contact" },
 ]
 
@@ -63,7 +63,11 @@ export function Navigation() {
               <motion.a
                 key={item.name}
                 href={item.href}
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className={
+                  item.highlight
+                    ? "text-sm font-medium text-accent transition-colors hover:text-foreground"
+                    : "text-sm text-muted-foreground transition-colors hover:text-foreground"
+                }
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.1 * i }}
@@ -84,7 +88,14 @@ export function Navigation() {
           </motion.div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-4 md:hidden">
+          <div className="flex items-center gap-2 md:hidden">
+            <a
+              href="/formules-reseaux-sociaux"
+              id="nav-mobile-community-management"
+              className="rounded-full border border-accent/60 px-3 py-1.5 text-xs font-medium text-accent transition-colors hover:bg-accent hover:text-accent-foreground"
+            >
+              Community Mgmt
+            </a>
             <Button variant="ghost" size="icon" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
               {mounted && (theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />)}
             </Button>
@@ -104,12 +115,16 @@ export function Navigation() {
           }}
           transition={{ duration: 0.3 }}
         >
-          <div className="flex h-full flex-col items-center justify-center gap-8">
+          <div className="flex h-full flex-col items-center justify-center gap-6 overflow-y-auto px-6 text-center">
             {navItems.map((item, i) => (
               <motion.a
                 key={item.name}
                 href={item.href}
-                className="font-serif text-3xl font-medium"
+                className={
+                  item.highlight
+                    ? "rounded-full border border-accent px-6 py-2 font-serif text-2xl font-medium text-accent"
+                    : "font-serif text-3xl font-medium"
+                }
                 onClick={() => setIsOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : 20 }}

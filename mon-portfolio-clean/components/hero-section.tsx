@@ -65,6 +65,9 @@ export function HeroSection() {
           <Button size="lg" variant="outline" className="px-8 bg-transparent" asChild>
             <a href="#contact">Me contacter</a>
           </Button>
+          <Button size="lg" variant="secondary" className="px-8" asChild>
+            <a href="/formules-reseaux-sociaux" id="hero-community-management">Community Management</a>
+          </Button>
         </motion.div>
 
         <motion.div
