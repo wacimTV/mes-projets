@@ -173,7 +173,7 @@ export function ContactSection() {
               variants={itemVariants}
               className="mb-6 font-serif text-4xl font-medium leading-tight tracking-tight md:text-5xl"
             >
-              Votre projet mérite une présence en ligne à la hauteur de vos ambitions.
+              Demandez votre devis gratuit pour la création de votre site internet
             </motion.h2>
 
             {/* Description */}

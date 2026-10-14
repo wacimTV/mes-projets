@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
+import Image from "next/image"
 import { Award, Briefcase, Code2, Sparkles } from "lucide-react"
 
 const stats = [
@@ -89,14 +90,14 @@ export function AboutSection() {
           >
             <span className="mb-4 inline-block text-sm font-medium uppercase tracking-widest text-accent">À Propos</span>
             <h2 className="mb-6 font-serif text-3xl font-medium leading-tight tracking-tight md:text-4xl">
-              Concevoir des expériences web qui allient design et performance.
+              Développeur web freelance à Marseille depuis 2019
             </h2>
             <div className="space-y-3 text-muted-foreground">
               <p>
-                Développeur web depuis 2019, je conçois des sites et des applications web soignés, rapides et faciles à prendre en main. Mon approche associe rigueur technique et sens du détail, avec une attention constante portée à l'expérience utilisateur.
+                Basé à Marseille, je conçois des sites internet, des applications web et des solutions e-commerce soignées, rapides et optimisées pour le référencement. Mon approche associe rigueur technique et sens du détail, avec une attention constante portée à l'expérience utilisateur.
               </p>
               <p>
-                J'accompagne entreprises et indépendants de la conception jusqu'à la mise en ligne avec des solutions adaptées à chaque besoin.
+                J'accompagne les entreprises, les commerces et les indépendants des Bouches-du-Rhône — et partout en France — de la conception jusqu'à la mise en ligne.
               </p>
             </div>
 
@@ -155,10 +156,14 @@ export function AboutSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mt-12 overflow-hidden rounded-2xl bg-secondary"
             >
-              <img
+              <Image
                 src="/IMG_4611.jpeg"
-                alt="Wacim AMMOUCHE"
+                alt="Wacim Ammouche, développeur web freelance à Marseille"
+                width={600}
+                height={750}
                 className="w-full rounded-2xl"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority={false}
               />
             </motion.div>
           </motion.div>

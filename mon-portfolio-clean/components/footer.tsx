@@ -51,7 +51,7 @@ export function Footer() {
               WA
             </a>
             <p className="mt-4 max-w-sm text-muted-foreground">
-              Développeur web créatif concevant des expériences digitales d'exception. Créons quelque chose d'incroyable ensemble.
+              Développeur web freelance à Marseille. Création de sites internet, e-commerce, commandes en ligne et communication digitale dans les Bouches-du-Rhône.
             </p>
           </div>
 

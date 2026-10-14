@@ -17,7 +17,7 @@ export function HeroSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
   return (
-    <section ref={ref} className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
+    <section ref={ref} id="hero" aria-label="Présentation" className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
       <ParticleField />
 
       <motion.div className="relative z-10 mx-auto max-w-5xl text-center" style={{ y, opacity }}>
@@ -35,8 +35,8 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.7 }}
         >
-          <span className="block">Développeur Web Full-Stack</span>
-          <span className="block text-gradient">Des sites modernes, performants et fiables
+          <span className="block">Développeur Web Freelance à Marseille</span>
+          <span className="block text-gradient">Création de sites internet modernes et performants
           </span>
         </motion.h1>
 
@@ -46,7 +46,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.9 }}
         >
-          Je m'appelle Wacim Ammouche, développeur web passionné. J'accompagne les entreprises et les entrepreneurs dans la création de sites web modernes, rapides et sécurisés, avec une attention particulière portée à l'expérience utilisateur, aux performances et à la qualité du code.
+          Wacim Ammouche, développeur web freelance basé à Marseille. Je crée des sites internet sur-mesure, des e-commerces et des systèmes de commande en ligne pour restaurants et commerces dans les Bouches-du-Rhône et partout en France.
 
         </motion.p>
 

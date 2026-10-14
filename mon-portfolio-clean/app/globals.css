@@ -139,3 +139,21 @@ html {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Skip to content - accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 16px;
+  z-index: 100;
+  padding: 8px 16px;
+  background: var(--background);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  transition: top 0.2s;
+}
+.skip-to-content:focus {
+  top: 8px;
+}

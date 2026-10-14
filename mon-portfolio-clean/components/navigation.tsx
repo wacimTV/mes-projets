@@ -41,7 +41,7 @@ export function Navigation() {
       </motion.header>
 
       <header className="fixed top-0 left-0 right-0 z-50 px-6 py-4 md:px-12">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between" aria-label="Navigation principale">
           <motion.a
             href="/"
             className="relative z-10 font-serif text-2xl font-medium tracking-tight"

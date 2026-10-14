@@ -65,7 +65,7 @@ export function ServicesSection() {
           className="mb-16 text-center"
         >
           <span className="mb-4 inline-block text-sm font-medium uppercase tracking-widest text-accent">Ce que je fais</span>
-          <h2 className="font-serif text-4xl font-medium tracking-tight md:text-5xl">Mes Services</h2>
+          <h2 className="font-serif text-4xl font-medium tracking-tight md:text-5xl">Services de Création Web à Marseille</h2>
         </motion.div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
