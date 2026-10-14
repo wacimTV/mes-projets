@@ -270,7 +270,7 @@ export function NfcSection() {
               Installation de votre carte NFC &amp; QR Code
             </h3>
             <div className="mb-6 flex items-baseline gap-2">
-              <span className="font-serif text-4xl font-medium">À partir de 59 €</span>
+              <span className="font-serif text-4xl font-medium">À partir de 50 €</span>
               <span className="text-muted-foreground text-sm">TTC</span>
             </div>
 

@@ -147,7 +147,7 @@ function JsonLd() {
         },
         priceSpecification: {
           "@type": "PriceSpecification",
-          price: "59",
+          price: "50",
           priceCurrency: "EUR",
           valueAddedTaxIncluded: true,
         },

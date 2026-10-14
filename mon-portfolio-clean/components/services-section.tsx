@@ -43,7 +43,7 @@ const services = [
   {
     icon: Wifi,
     title: "Carte NFC & QR Code — Avis Google",
-    price: "À partir de 59€ TTC",
+    price: "À partir de 50€ TTC",
     description:
       "Transformez chaque client satisfait en nouvel avis Google grâce à une carte NFC & QR Code simple, rapide et efficace. Idéal pour les commerces, restaurants, salons et artisans. Configuration, test et mise en service inclus.",
     features: ["NFC + QR Code configurés sur votre fiche Google", "Installation & mise en service sur place", "Déplacement dans le 13 pour l'installation", "Envoi à l'international · Devis gratuit"],
