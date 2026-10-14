@@ -85,7 +85,7 @@ export function HeroSection() {
             <a href="#contact">Demander un devis gratuit</a>
           </Button>
           <Button size="lg" variant="outline" className="px-8 bg-transparent" asChild>
-            <a href="/formules-reseaux-sociaux" id="hero-community-management">
+            <a href="/community-management" id="hero-community-management">
               Voir mes formules Community Management
             </a>
           </Button>

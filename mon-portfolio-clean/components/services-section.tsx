@@ -42,7 +42,7 @@ const services = [
   {
     icon: Share2,
     title: "Community Management",
-    href: "/formules-reseaux-sociaux",
+    href: "/community-management",
     linkLabel: "Voir les formules Community Manager",
     price: "Dès 250 €/mois",
     description:

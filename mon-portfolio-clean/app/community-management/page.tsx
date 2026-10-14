@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Community manager freelance à Marseille : gestion de vos réseaux sociaux Instagram & TikTok. Création de contenus, stratégie et formules dès 250 €/mois. Devis gratuit.",
   alternates: {
-    canonical: "https://www.wacimammouche.fr/formules-reseaux-sociaux",
+    canonical: "https://www.wacimammouche.fr/community-management",
   },
   openGraph: {
     title: "Community Manager Marseille & Gestion des Réseaux Sociaux | Wacim Ammouche",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "Formules de community management pour commerces, restaurants et entreprises. Création de contenus et stratégie Instagram & TikTok. Sur place dans le 13 ou à distance à l'international.",
     type: "website",
     locale: "fr_FR",
-    url: "https://www.wacimammouche.fr/formules-reseaux-sociaux",
+    url: "https://www.wacimammouche.fr/community-management",
     images: [
       {
         url: DEFAULT_OG_IMAGE.url,
@@ -63,7 +63,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Community Manager & Réseaux Sociaux Marseille",
-      item: "https://www.wacimammouche.fr/formules-reseaux-sociaux",
+      item: "https://www.wacimammouche.fr/community-management",
     },
   ],
 }

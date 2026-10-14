@@ -160,7 +160,7 @@ export default function CarteNfcPage() {
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="px-8 bg-transparent" asChild>
-                <Link href="/formules-reseaux-sociaux">
+                <Link href="/community-management">
                   Découvrir mes formules réseaux sociaux
                 </Link>
               </Button>
@@ -247,7 +247,7 @@ export default function CarteNfcPage() {
                   <CheckCircle className="h-5 w-5 text-accent shrink-0 mt-0.5" />
                   <span>
                     Développez votre communauté avec mon service de{" "}
-                    <Link href="/formules-reseaux-sociaux" className="text-accent hover:underline">
+                    <Link href="/community-management" className="text-accent hover:underline">
                       community management pour Instagram et TikTok
                     </Link>
                     .

@@ -207,7 +207,7 @@ const services = [
     title: "Community Management & Réseaux Sociaux",
     description:
       "Gestion de vos réseaux sociaux Instagram et TikTok, création de contenus et stratégie de visibilité en ligne pour développer votre audience.",
-    link: "/formules-reseaux-sociaux",
+    link: "/community-management",
     linkText: "Consulter mes formules de community management",
   },
   {
@@ -560,7 +560,7 @@ export default function DeveloppeurWebMarseillePage() {
                 className="px-8 bg-transparent"
                 asChild
               >
-                <Link href="/formules-reseaux-sociaux">
+                <Link href="/community-management">
                   Community Management
                 </Link>
               </Button>

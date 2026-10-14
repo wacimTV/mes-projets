@@ -245,7 +245,7 @@ export default function RefonteSiteMarseillePage() {
                   commande en ligne pour commerce et restauration
                 </Link>{" "}
                 ou une intégration avec votre stratégie de{" "}
-                <Link href="/formules-reseaux-sociaux" className="text-accent hover:underline">
+                <Link href="/community-management" className="text-accent hover:underline">
                   community management et visibilité sur les réseaux sociaux
                 </Link>
                 .

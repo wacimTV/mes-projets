@@ -274,7 +274,7 @@ export default function CommandeEnLignePage() {
                   <CheckCircle className="h-5 w-5 text-accent shrink-0 mt-0.5" />
                   <span>
                     Visibilité accrue sur les réseaux avec mes{" "}
-                    <Link href="/formules-reseaux-sociaux" className="text-accent hover:underline">
+                    <Link href="/community-management" className="text-accent hover:underline">
                       formules de community management pour Instagram et TikTok
                     </Link>
                     .

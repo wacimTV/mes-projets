@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 const navItems = [
   { name: "Accueil", href: "/" },
   { name: "Création Sites Internet", href: "/developpeur-web-marseille" },
-  { name: "Community Management", href: "/formules-reseaux-sociaux", highlight: true },
+  { name: "Community Management", href: "/community-management", highlight: true },
   // { name: "Projets", href: "/#projects" },
   { name: "À Propos", href: "/#about" },
   { name: "Services", href: "/#services" },
@@ -92,7 +92,7 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 md:hidden">
             <a
-              href="/formules-reseaux-sociaux"
+              href="/community-management"
               id="nav-mobile-community-management"
               className="rounded-full border border-accent/60 px-3 py-1.5 text-xs font-medium text-accent transition-colors hover:bg-accent hover:text-accent-foreground"
             >

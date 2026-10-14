@@ -20,6 +20,11 @@ const nextConfig = {
         destination: "https://www.wacimammouche.fr/:path*",
         permanent: true,
       },
+      {
+        source: "/formules-reseaux-sociaux",
+        destination: "/community-management",
+        permanent: true,
+      },
     ]
   },
   async headers() {
