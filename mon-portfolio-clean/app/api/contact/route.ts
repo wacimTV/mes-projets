@@ -1,13 +1,15 @@
 import { NextResponse } from "next/server"
 import { Resend } from "resend"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 const escapeHtml = (s: string) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;")
 
 export async function POST(req: Request) {
   try {
+    if (!process.env.RESEND_API_KEY) {
+      return NextResponse.json({ error: "Configuration email manquante." }, { status: 500 })
+    }
+    const resend = new Resend(process.env.RESEND_API_KEY)
     const body = await req.json()
     const { subject: rawSubject, message: rawMessage } = body
     const name = escapeHtml(body.name ?? "")

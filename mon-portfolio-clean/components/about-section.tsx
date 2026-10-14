@@ -1,5 +1,4 @@
 "use client"
-"d"
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
@@ -80,7 +79,7 @@ export function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="about" className="relative py-32 px-6" ref={ref}>
+    <section id="about" className="relative py-32 px-6" ref={ref} aria-label="À propos de Wacim Ammouche, développeur web freelance à Marseille">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Left Column - Bio */}
@@ -95,10 +94,10 @@ export function AboutSection() {
             </h2>
             <div className="space-y-3 text-muted-foreground">
               <p>
-                Basé à Marseille, je conçois des sites internet, des applications web et des solutions e-commerce soignées, rapides et optimisées pour le référencement. Mon approche associe rigueur technique et sens du détail, avec une attention constante portée à l'expérience utilisateur.
+                Basé à Marseille, je conçois des sites internet, des applications web et des solutions e-commerce soignées, rapides et optimisées pour le référencement. Mon approche associe rigueur technique et sens du détail, avec une attention constante portée à l&apos;expérience utilisateur.
               </p>
               <p>
-                J'accompagne les entreprises, les commerces et les indépendants des Bouches-du-Rhône — et partout en France — de la conception jusqu'à la mise en ligne.
+                J&apos;accompagne les entreprises, les commerces et les indépendants des Bouches-du-Rhône — et partout en France — dans la création de leur site web et leur communication digitale, de la conception jusqu&apos;à la mise en ligne.
               </p>
             </div>
 

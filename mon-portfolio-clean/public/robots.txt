@@ -1,6 +1,6 @@
-# robots.txt – wacimammouche.com
+# robots.txt – wacimammouche.fr
 User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://www.wacimammouche.com/sitemap.xml
+Sitemap: https://www.wacimammouche.fr/sitemap.xml

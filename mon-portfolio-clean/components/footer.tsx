@@ -12,6 +12,7 @@ const footerLinks = [
       { name: "À Propos", href: "/#about" },
       { name: "Projets", href: "/#projects" },
       { name: "Services", href: "/#services" },
+      { name: "Développeur Web Marseille", href: "/developpeur-web-marseille" },
       { name: "Community Management", href: "/formules-reseaux-sociaux" },
       { name: "Contact", href: "/#contact" },
     ],

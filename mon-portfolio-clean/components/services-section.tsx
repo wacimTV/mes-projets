@@ -56,7 +56,7 @@ export function ServicesSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
-    <section id="services" className="relative py-32 px-6 bg-secondary/30" ref={ref}>
+    <section id="services" className="relative py-32 px-6 bg-secondary/30" ref={ref} aria-label="Services de création web et communication digitale à Marseille">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -65,7 +65,7 @@ export function ServicesSection() {
           className="mb-16 text-center"
         >
           <span className="mb-4 inline-block text-sm font-medium uppercase tracking-widest text-accent">Ce que je fais</span>
-          <h2 className="font-serif text-4xl font-medium tracking-tight md:text-5xl">Services de Création Web à Marseille</h2>
+          <h2 className="font-serif text-4xl font-medium tracking-tight md:text-5xl">Services de Création Web et Communication Digitale à Marseille</h2>
         </motion.div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -148,7 +148,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="relative py-32 px-6 bg-secondary/30" ref={ref}>
+    <section id="contact" className="relative py-32 px-6 bg-secondary/30" ref={ref} aria-label="Contacter un développeur web freelance à Marseille">
       <div className="mx-auto max-w-7xl">
 
         {/* ── Grid: Left Info + Right Form ─────────────────────────────── */}

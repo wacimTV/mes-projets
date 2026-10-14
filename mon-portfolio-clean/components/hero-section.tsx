@@ -46,7 +46,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.9 }}
         >
-          Wacim Ammouche, développeur web freelance basé à Marseille. Je crée des sites internet sur-mesure, des e-commerces et des systèmes de commande en ligne pour restaurants et commerces dans les Bouches-du-Rhône et partout en France.
+          Wacim Ammouche, développeur web freelance basé à Marseille. Je crée des sites internet sur-mesure, des e-commerces, des systèmes de commande en ligne et j&apos;accompagne les entreprises dans leur communication digitale — à Marseille, dans les Bouches-du-Rhône et partout en France.
 
         </motion.p>
 

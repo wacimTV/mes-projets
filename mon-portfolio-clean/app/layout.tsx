@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
 });
 
-const siteUrl = "https://www.wacimammouche.com";
+const siteUrl = "https://www.wacimammouche.fr";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -27,14 +27,19 @@ export const metadata: Metadata = {
   description:
     "Développeur web freelance à Marseille. Création de sites internet, applications web, e-commerce et commande en ligne pour restaurants et commerces. Devis gratuit.",
   keywords: [
-    "développeur web freelance Marseille",
-    "création site internet Marseille",
+    "développeur Marseille",
     "développeur web Marseille",
+    "développeur web freelance Marseille",
+    "freelance développeur Marseille",
+    "création site internet Marseille",
+    "community manager Marseille",
+    "communication digitale Marseille",
     "site web Marseille",
     "création site e-commerce Marseille",
     "commande en ligne restaurant Marseille",
     "site vitrine Marseille",
     "community management Marseille",
+    "gestion réseaux sociaux Marseille",
     "carte NFC avis Google",
     "QR Code avis Google",
     "développeur full-stack Marseille",
@@ -150,6 +155,33 @@ function JsonLd() {
     ],
   };
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Wacim Ammouche — Développeur Web Freelance à Marseille",
+    url: siteUrl,
+    description:
+      "Développeur web freelance à Marseille. Création de sites internet, applications web, e-commerce et communication digitale.",
+    inLanguage: "fr-FR",
+    publisher: {
+      "@type": "Person",
+      name: "Wacim Ammouche",
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Accueil",
+        item: siteUrl,
+      },
+    ],
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -194,6 +226,14 @@ function JsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
