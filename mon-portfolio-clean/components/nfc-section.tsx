@@ -344,8 +344,8 @@ export function NfcSection() {
 
             {/* Secondary CTA */}
             <Button size="lg" variant="outline" className="group bg-transparent" asChild>
-              <a href="mailto:w.ammouche13@gmail.com" id="nfc-email-button">
-                Me contacter par email
+              <a href="#contact" id="nfc-email-button">
+                Me contacter directement
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>

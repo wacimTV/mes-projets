@@ -53,7 +53,7 @@ export function AboutSection() {
                 Je m&apos;appelle Wacim Ammouche. Basé à Marseille, je conçois des sites internet, des applications web et des solutions e-commerce soignées, rapides et optimisées pour le référencement naturel. Mon approche associe rigueur technique et sens du détail, avec une attention constante portée à la performance et à l&apos;expérience utilisateur.
               </p>
               <p>
-                J&apos;accompagne les entreprises, commerces, restaurants et indépendants des Bouches-du-Rhône — et partout en France — dans la création de sites internet, le développement web sur-mesure et leur communication digitale.
+                Je suis basé à Marseille et je me déplace dans tout le département des Bouches-du-Rhône. Je travaille aussi à distance, en visioconférence, avec des clients à l&apos;international. J&apos;accompagne les entreprises, commerces, restaurants et indépendants dans la création de sites internet, le développement web sur-mesure et leur communication digitale.
               </p>
             </div>
 

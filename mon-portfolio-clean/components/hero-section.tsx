@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ArrowDown, Instagram, Linkedin } from "lucide-react"
+import { ArrowDown, Instagram, Linkedin, MapPin, Globe } from "lucide-react"
 import { useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { ParticleField } from "@/components/particle-field"
@@ -51,13 +51,29 @@ export function HeroSection() {
         </motion.p>
 
         <motion.p
-          className="mx-auto mb-10 max-w-xl text-lg text-muted-foreground md:text-xl"
+          className="mx-auto mb-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.9 }}
         >
-          Je crée des sites rapides et bien référencés, et je gère l'Instagram et le TikTok des commerces, restaurants et indépendants de Marseille et des Bouches-du-Rhône. Devis gratuit sous 24h.
+          Je crée des sites rapides et bien référencés, et je gère l&apos;Instagram et le TikTok des commerces, restaurants et indépendants. Basé à Marseille, je me déplace dans tout le 13 et je travaille aussi à distance, en visio, à l&apos;international. Devis gratuit sous 24h.
         </motion.p>
+
+        <motion.div
+          className="mb-10 flex flex-wrap items-center justify-center gap-3"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 2.0 }}
+        >
+          <span className="flex items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-1.5 text-xs sm:text-sm text-muted-foreground">
+            <MapPin className="h-3.5 w-3.5 text-accent" />
+            Sur place dans les Bouches-du-Rhône
+          </span>
+          <span className="flex items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-1.5 text-xs sm:text-sm text-muted-foreground">
+            <Globe className="h-3.5 w-3.5 text-accent" />
+            À distance à l&apos;international
+          </span>
+        </motion.div>
 
         <motion.div
           className="flex flex-col items-center justify-center gap-4 sm:flex-row"

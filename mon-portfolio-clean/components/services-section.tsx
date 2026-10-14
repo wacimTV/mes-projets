@@ -12,7 +12,7 @@ const services = [
     href: "/developpeur-web-marseille",
     linkLabel: "Découvrir la création de sites internet",
     description:
-      "Conception et développement de sites vitrines, e-commerce et applications web sur-mesure à Marseille. Des réalisations rapides, fluides sur mobile et optimisées pour le référencement naturel.",
+      "Conception et développement de sites vitrines, e-commerce et applications web sur-mesure. Des réalisations rapides, fluides sur mobile et optimisées pour le référencement naturel. Sur place dans le 13 ou à distance.",
     features: ["Sites vitrines & corporate", "E-commerce & Boutiques", "Applications web sur-mesure", "Optimisation SEO & Performance"],
   },
   {
@@ -28,7 +28,7 @@ const services = [
     title: "Prise de commandes en ligne",
     href: "/commande-en-ligne-restaurant-marseille",
     linkLabel: "Découvrir la commande en ligne restaurant",
-    description: "Permettez à vos clients de commander directement depuis votre site web grâce à un système de commande simple, rapide et sécurisé. Idéal pour les restaurants, snacks, boulangeries et commerces à Marseille.",
+    description: "Permettez à vos clients de commander directement depuis votre site web grâce à un système de commande simple, rapide et sécurisé. Idéal pour les restaurants, snacks, boulangeries et commerces.",
     features: ["Commande en ligne 24h/24", "Paiement sécurisé par CB", "Gestion des produits et des stocks", "Notifications automatiques des commandes"],
   },
   {
@@ -44,9 +44,10 @@ const services = [
     title: "Community Management",
     href: "/formules-reseaux-sociaux",
     linkLabel: "Voir les formules Community Manager",
+    price: "Dès 250 €/mois",
     description:
-      "Gestion professionnelle de vos réseaux sociaux Instagram & TikTok à Marseille. De la création de contenus visuels à la publication, je valorise votre entreprise pour booster votre visibilité.",
-    features: ["Gestion des réseaux sociaux", "Création de contenus & visuels", "Stratégie de communication locale", "Formules mensuelles dès 250 €/mois"],
+      "Gestion professionnelle de vos réseaux sociaux Instagram & TikTok. De la création de contenus visuels à la publication, je valorise votre entreprise pour booster votre visibilité.",
+    features: ["Gestion des réseaux sociaux", "Création de contenus & visuels", "Stratégie de communication", "Formules mensuelles dès 250 €/mois"],
   },
   {
     icon: Wifi,
@@ -56,7 +57,7 @@ const services = [
     price: "À partir de 50€ TTC",
     description:
       "Transformez chaque client satisfait en nouvel avis Google grâce à une carte NFC & QR Code simple, rapide et efficace. Idéal pour les commerces, restaurants, salons et artisans. Configuration, test et mise en service inclus.",
-    features: ["NFC + QR Code configurés sur votre fiche Google", "Installation & mise en service sur place", "Déplacement dans le 13 pour l'installation", "Envoi à l'international · Devis gratuit"],
+    features: ["NFC + QR Code configurés sur votre fiche Google", "Installation & mise en service sur place", "Déplacement dans le 13 pour l'installation", "Envoi à l'international · Dès 50 € TTC"],
   },
 ]
 
@@ -66,7 +67,7 @@ export function ServicesSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
-    <section id="services" className="relative py-32 px-6 bg-secondary/30" ref={ref} aria-label="Services de création web et communication digitale à Marseille">
+    <section id="services" className="relative py-32 px-6 bg-secondary/30" ref={ref} aria-label="Services de création web et communication digitale">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -75,7 +76,7 @@ export function ServicesSection() {
           className="mb-16 text-center"
         >
           <span className="mb-4 inline-block text-sm font-medium uppercase tracking-widest text-accent">Ce que je fais</span>
-          <h2 className="font-serif text-4xl font-medium tracking-tight md:text-5xl">Création de Sites Internet &amp; Services Web à Marseille</h2>
+          <h2 className="font-serif text-4xl font-medium tracking-tight md:text-5xl">Création de Sites Internet &amp; Solutions Digitales</h2>
         </motion.div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

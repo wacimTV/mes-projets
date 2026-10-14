@@ -7,28 +7,29 @@ import { ServicesSection } from "@/components/services-section"
 import { NfcSection } from "@/components/nfc-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
+import { DEFAULT_OG_IMAGE } from "@/lib/seo"
 
 export const metadata: Metadata = {
   title: "Développeur Web & Community Manager à Marseille | Wacim Ammouche",
   description:
-    "Développeur web freelance et community manager à Marseille. Sites internet, e-commerce, commande en ligne et réseaux sociaux. Devis gratuit sous 24h.",
+    "Développeur web & community manager à Marseille. Sites internet, e-commerce, réseaux sociaux : sur place dans le 13 ou en visio à l'international. Devis gratuit.",
   alternates: {
     canonical: "https://www.wacimammouche.fr",
   },
   openGraph: {
     title: "Développeur Web & Community Manager à Marseille | Wacim Ammouche",
     description:
-      "Développeur web freelance et community manager à Marseille. Sites internet, e-commerce, commande en ligne et réseaux sociaux. Devis gratuit sous 24h.",
+      "Développeur web & community manager à Marseille. Sites internet, e-commerce, réseaux sociaux : sur place dans le 13 ou en visio à l'international. Devis gratuit.",
     type: "website",
     locale: "fr_FR",
     url: "https://www.wacimammouche.fr",
     siteName: "Wacim Ammouche",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Développeur Web & Community Manager à Marseille | Wacim Ammouche",
+        url: DEFAULT_OG_IMAGE.url,
+        width: DEFAULT_OG_IMAGE.width,
+        height: DEFAULT_OG_IMAGE.height,
+        alt: DEFAULT_OG_IMAGE.alt,
       },
     ],
   },
@@ -36,8 +37,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Développeur Web & Community Manager à Marseille | Wacim Ammouche",
     description:
-      "Développeur web freelance et community manager à Marseille. Sites internet, e-commerce, commande en ligne et réseaux sociaux. Devis gratuit sous 24h.",
-    images: ["/og-image.jpg"],
+      "Développeur web & community manager à Marseille. Sites internet, e-commerce, réseaux sociaux : sur place dans le 13 ou en visio à l'international. Devis gratuit.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 }
 
@@ -116,7 +117,7 @@ const homeFaqSchema = {
       name: "Travaillez-vous à distance ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolument. Je collabore en visioconférence avec des clients partout en France.",
+        text: "Absolument. Je collabore en visioconférence avec des clients à l'international.",
       },
     },
     {
@@ -124,7 +125,7 @@ const homeFaqSchema = {
       name: "Vous déplacez-vous chez vos clients ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Oui, je me déplace à Marseille, dans les communes voisines et dans l'ensemble des Bouches-du-Rhône (13).",
+        text: "Oui, je me déplace dans tout le département des Bouches-du-Rhône (13).",
       },
     },
   ],
@@ -169,7 +170,7 @@ export default function Home() {
       <main id="main-content" className="relative">
         <HeroSection />
         <AboutSection />
-        <ProjectsSection />
+        {/* <ProjectsSection /> */}
         <ServicesSection />
         <NfcSection />
         <ContactSection />

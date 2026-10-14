@@ -94,8 +94,8 @@ export function QuoteDialog({ open, onOpenChange, formula, onFormulaChange }: Pr
       setSent(true)
     } catch (err) {
       setServerError(
-        (err instanceof Error ? err.message : "Une erreur est survenue") +
-        " Votre demande n'a pas été envoyée : réessayez ou écrivez à w.ammouche13@gmail.com.",
+        (err instanceof Error ? err.message : "Une erreur est survenue.") +
+        " Votre demande n'a pas été envoyée : réessayez ou utilisez directement le formulaire de contact du site.",
       )
     } finally {
       setLoading(false)

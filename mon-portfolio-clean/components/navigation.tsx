@@ -10,7 +10,7 @@ const navItems = [
   { name: "Accueil", href: "/" },
   { name: "Création Sites Internet", href: "/developpeur-web-marseille" },
   { name: "Community Management", href: "/formules-reseaux-sociaux", highlight: true },
-  { name: "Projets", href: "/#projects" },
+  // { name: "Projets", href: "/#projects" },
   { name: "À Propos", href: "/#about" },
   { name: "Services", href: "/#services" },
   { name: "Contact", href: "/#contact" },

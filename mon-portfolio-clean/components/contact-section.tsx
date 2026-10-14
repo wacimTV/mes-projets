@@ -47,11 +47,11 @@ const faqItems = [
   },
   {
     q: "Travaillez-vous à distance ?",
-    a: "Absolument. Je collabore en visioconférence avec des clients partout en France. La distance n'est pas un obstacle.",
+    a: "Absolument. Je collabore en visioconférence avec des clients à l'international. La distance n'est pas un obstacle.",
   },
   {
     q: "Vous déplacez-vous chez vos clients ?",
-    a: "Oui, je me déplace à Marseille, dans les communes voisines et dans l'ensemble des Bouches-du-Rhône (13) pour les rendez-vous en présentiel.",
+    a: "Oui, je me déplace dans tout le département des Bouches-du-Rhône (13) pour les rendez-vous en présentiel.",
   },
 ]
 
@@ -205,7 +205,7 @@ export function ContactSection() {
                 <div>
                   <div className="mb-0.5 text-xs font-medium uppercase tracking-wider text-muted-foreground">Email</div>
                   <a
-                    href="mailto:w.ammouche13@gmail.com"
+                    href="#contact-form"
                     className="font-medium transition-colors hover:text-accent"
                   >
                     w.ammouche13@gmail.com
@@ -249,18 +249,28 @@ export function ContactSection() {
               {/* Déplacements */}
               <motion.div
                 variants={itemVariants}
-                className="group flex items-start gap-4 rounded-xl p-3 -mx-3 transition-colors hover:bg-accent/5"
+                className="group flex items-center gap-4 rounded-xl p-3 -mx-3 transition-colors hover:bg-accent/5"
               >
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent/10 transition-colors group-hover:bg-accent/20">
                   <Car className="h-5 w-5 text-accent" />
                 </div>
                 <div>
                   <div className="mb-0.5 text-xs font-medium uppercase tracking-wider text-muted-foreground">Déplacements</div>
-                  <span className="font-medium">Marseille, communes voisines et tout le 13</span>
-                  <div className="mt-1 flex items-center gap-1.5 text-sm text-muted-foreground">
-                    <Video className="h-3.5 w-3.5 shrink-0" />
-                    <span>Visioconférence disponible pour toute la France</span>
-                  </div>
+                  <span className="font-medium">Dans tout le département des Bouches-du-Rhône (13)</span>
+                </div>
+              </motion.div>
+
+              {/* Visioconférence */}
+              <motion.div
+                variants={itemVariants}
+                className="group flex items-center gap-4 rounded-xl p-3 -mx-3 transition-colors hover:bg-accent/5"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent/10 transition-colors group-hover:bg-accent/20">
+                  <Video className="h-5 w-5 text-accent" />
+                </div>
+                <div>
+                  <div className="mb-0.5 text-xs font-medium uppercase tracking-wider text-muted-foreground">Visioconférence</div>
+                  <span className="font-medium">Prestations réalisables à distance, à l'international</span>
                 </div>
               </motion.div>
 
@@ -309,7 +319,7 @@ export function ContactSection() {
                   </p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form id="contact-form" onSubmit={handleSubmit} className="space-y-5">
 
                   {/* Name + Email */}
                   <div className="grid gap-5 sm:grid-cols-2">
@@ -460,7 +470,7 @@ export function ContactSection() {
           >
             Une question non listée ?{" "}
             <a
-              href="mailto:w.ammouche13@gmail.com"
+              href="#contact-form"
               className="font-medium text-accent underline-offset-4 hover:underline"
             >
               Écrivez-moi directement

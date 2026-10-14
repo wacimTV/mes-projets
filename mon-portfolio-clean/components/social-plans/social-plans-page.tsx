@@ -88,12 +88,12 @@ export function SocialPlansPage() {
                   Community Manager à Marseille &amp; <span className="sp-gold-text">Gestion des Réseaux Sociaux</span>
                 </h1>
                 <p className="sp-lead mx-auto mt-6 text-base md:text-lg">
-                  Des formules claires et sur-mesure pour développer votre visibilité sur Instagram et TikTok. Basé à Marseille, j&apos;accompagne les commerces, restaurants et entreprises dans la gestion de leurs réseaux sociaux, la création de contenus visuels et leur stratégie de communication digitale.
+                  Des formules claires et sur-mesure pour développer votre visibilité sur Instagram et TikTok. Basé à Marseille, j&apos;accompagne les commerces, restaurants et entreprises dans la gestion de leurs réseaux sociaux, la création de contenus visuels et leur stratégie de communication digitale. Sur place dans le 13 ou à distance à l&apos;international.
                 </p>
                 <p className="mx-auto mt-3 text-xs text-muted-foreground">
                   Besoin d&apos;un site web en parallèle ? Découvrez mes prestations de{" "}
                   <a href="/#services" className="underline underline-offset-4 hover:text-foreground transition-colors">
-                    création de site internet à Marseille
+                    création de site internet
                   </a>
                   .
                 </p>
@@ -118,7 +118,7 @@ export function SocialPlansPage() {
             <div className="sp-container">
               <SectionHeading
                 id="plans-title"
-                eyebrow="Nos formules"
+                eyebrow="Mes formules"
                 title="Choisissez la formule adaptée à votre entreprise"
                 lead="Tous les tarifs sont mensuels et indiqués TTC."
               />

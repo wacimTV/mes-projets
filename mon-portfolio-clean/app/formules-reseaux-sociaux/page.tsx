@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { SocialPlansPage } from "@/components/social-plans/social-plans-page"
 import { faqs, plans } from "@/components/social-plans-data"
+import { DEFAULT_OG_IMAGE } from "@/lib/seo"
 import "./social-plans.css"
 
 export const metadata: Metadata = {
@@ -13,15 +14,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Community Manager Marseille & Gestion des Réseaux Sociaux | Wacim Ammouche",
     description:
-      "Formules de community management pour commerces, restaurants et entreprises à Marseille. Création de contenus et stratégie Instagram & TikTok.",
+      "Formules de community management pour commerces, restaurants et entreprises. Création de contenus et stratégie Instagram & TikTok. Sur place dans le 13 ou à distance à l'international.",
     type: "website",
     locale: "fr_FR",
     url: "https://www.wacimammouche.fr/formules-reseaux-sociaux",
     images: [
       {
-        url: "/wacim-ammouche.jpg",
-        width: 1000,
-        height: 1333,
+        url: DEFAULT_OG_IMAGE.url,
+        width: DEFAULT_OG_IMAGE.width,
+        height: DEFAULT_OG_IMAGE.height,
         alt: "Community Manager à Marseille - Wacim Ammouche",
       },
     ],
@@ -30,8 +31,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Community Manager Marseille & Gestion des Réseaux Sociaux",
     description:
-      "Formules de community management à Marseille pour Instagram & TikTok dès 250 €/mois. Devis gratuit sous 24h.",
-    images: ["/wacim-ammouche.jpg"],
+      "Formules de community management pour Instagram & TikTok dès 250 €/mois. Devis gratuit sous 24h.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 }
 
@@ -72,16 +73,17 @@ const serviceSchema = {
   "@type": "Service",
   name: "Community Manager & Gestion des réseaux sociaux à Marseille",
   description:
-    "Gestion professionnelle des réseaux sociaux Instagram et TikTok pour entreprises, commerces et restaurants à Marseille et dans les Bouches-du-Rhône.",
+    "Gestion professionnelle des réseaux sociaux Instagram et TikTok pour entreprises, commerces et restaurants, sur place dans les Bouches-du-Rhône ou à distance à l'international.",
   provider: {
     "@type": "ProfessionalService",
     name: "Wacim Ammouche",
     url: "https://www.wacimammouche.fr",
   },
-  areaServed: {
-    "@type": "City",
-    name: "Marseille",
-  },
+  areaServed: [
+    { "@type": "City", name: "Marseille" },
+    { "@type": "AdministrativeArea", name: "Bouches-du-Rhône" },
+    { "@type": "Country", name: "France" },
+  ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Formules Community Management",

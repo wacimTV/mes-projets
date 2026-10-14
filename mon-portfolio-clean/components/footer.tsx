@@ -63,7 +63,7 @@ export function Footer() {
               WA
             </a>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground leading-relaxed">
-              Développeur web freelance et community manager à Marseille. Création de sites internet, commande en ligne pour restaurants et gestion des réseaux sociaux dans les Bouches-du-Rhône.
+              Développeur web freelance et community manager à Marseille. Création de sites internet, commande en ligne pour restaurants et gestion des réseaux sociaux dans les Bouches-du-Rhône et à distance à l'international.
             </p>
           </div>
 

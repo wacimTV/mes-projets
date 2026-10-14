@@ -13,8 +13,10 @@ import {
   ArrowRight,
   ShieldCheck,
   CheckCircle,
+  Globe,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { DEFAULT_OG_IMAGE } from "@/lib/seo"
 
 export const metadata: Metadata = {
   title: "Commande en Ligne pour Restaurant à Marseille | Click & Collect",
@@ -24,16 +26,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Commande en Ligne pour Restaurant à Marseille | Solution Sans Commission",
     description:
-      "Installez votre propre système de commande en ligne pour votre restaurant à Marseille. Click & collect direct, paiement sécurisé et zéro intermédiaire.",
+      "Installez votre propre système de commande en ligne pour votre restaurant. Click & collect direct, paiement sécurisé et zéro intermédiaire.",
     type: "website",
     locale: "fr_FR",
     url: "https://www.wacimammouche.fr/commande-en-ligne-restaurant-marseille",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Commande en ligne pour restaurant à Marseille",
+        url: DEFAULT_OG_IMAGE.url,
+        width: DEFAULT_OG_IMAGE.width,
+        height: DEFAULT_OG_IMAGE.height,
+        alt: DEFAULT_OG_IMAGE.alt,
       },
     ],
   },
@@ -41,8 +43,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Commande en Ligne pour Restaurant à Marseille",
     description:
-      "Système de commande Click & Collect sur-mesure pour les restaurateurs marseillais. Devis gratuit sous 24h.",
-    images: ["/og-image.jpg"],
+      "Système de commande Click & Collect sur-mesure pour restaurateurs. Devis gratuit sous 24h.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 }
 
@@ -52,7 +54,7 @@ function PageJsonLd() {
     "@type": "Service",
     name: "Commande en ligne et Click & Collect pour restaurant à Marseille",
     description:
-      "Mise en place d'un système de commande en ligne direct pour restaurants, snacks et commerces de bouche à Marseille et dans les Bouches-du-Rhône.",
+      "Mise en place d'un système de commande en ligne direct pour restaurants, snacks et commerces de bouche, sur place dans les Bouches-du-Rhône ou à distance à l'international.",
     provider: {
       "@type": "ProfessionalService",
       name: "Wacim Ammouche",
@@ -61,6 +63,7 @@ function PageJsonLd() {
     areaServed: [
       { "@type": "City", name: "Marseille" },
       { "@type": "AdministrativeArea", name: "Bouches-du-Rhône" },
+      { "@type": "Country", name: "France" },
     ],
   }
 
@@ -100,21 +103,21 @@ function PageJsonLd() {
 const keyBenefits = [
   {
     icon: TrendingUp,
-    title: "Économisez les commissions élevées",
+    title: "Zéro commission sur vos commandes",
     description:
-      "Les agrégateurs de livraison prélèvent souvent entre 20% et 30% sur chaque commande. Avec votre propre module de commande directe, vous conservez l'intégralité de votre chiffre d'affaires.",
+      "Contrairement aux plateformes qui prélèvent jusqu'à 30% sur chaque commande, vous conservez l'intégralité de votre chiffre d'affaires et valorisez votre travail.",
   },
   {
     icon: Smartphone,
     title: "Expérience fluide sur smartphone",
     description:
-      "Plus de 80% des commandes à emporter se font sur mobile. L'interface est rapide, intuitive et permet à vos clients de commander leur repas en moins d'une minute.",
+      "Une interface web intuitive sans obligation d'installer une application lourde : vos clients commandent en quelques secondes en Click & Collect.",
   },
   {
     icon: CreditCard,
-    title: "Paiement en ligne & sur place",
+    title: "Paiement en ligne sécurisé ou sur place",
     description:
-      "Intégration bancaire sécurisée (carte bancaire, Apple Pay, Google Pay) ou encaissement direct au comptoir lors du retrait de la commande.",
+      "Offrez le choix à vos clients : paiement en ligne par carte bancaire ou règlement au comptoir lors du retrait de leur repas.",
   },
   {
     icon: Utensils,
@@ -154,7 +157,7 @@ export default function CommandeEnLignePage() {
             </h1>
 
             <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground md:text-xl leading-relaxed">
-              Propulsez votre établissement marseillais avec une solution de Click & Collect rapide, élégante et sans commission par commande. Reprenez le contrôle direct de votre fichier client et de votre rentabilité.
+              Propulsez votre établissement avec une solution de Click & Collect rapide, élégante et sans commission par commande. Reprenez le contrôle direct de votre fichier client et de votre rentabilité. Sur place dans le 13 ou à distance à l'international.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -166,7 +169,7 @@ export default function CommandeEnLignePage() {
               </Button>
               <Button size="lg" variant="outline" className="px-8 bg-transparent" asChild>
                 <Link href="/developpeur-web-marseille">
-                  Nos offres de création de sites
+                  Mes offres de création de sites
                 </Link>
               </Button>
             </div>
@@ -174,9 +177,9 @@ export default function CommandeEnLignePage() {
             {/* Badges de réassurance */}
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
               {[
-                { icon: MapPin, text: "Marseille & Bouches-du-Rhône" },
-                { icon: Clock, text: "Accompagnement et mise en place sur-mesure" },
-                { icon: ShieldCheck, text: "Vente en direct sans commission de plateforme" },
+                { icon: MapPin, text: "Sur place dans le 13" },
+                { icon: Globe, text: "À distance à l'international" },
+                { icon: ShieldCheck, text: "Sans commission de plateforme" },
                 { icon: BadgeCheck, text: "Devis gratuit et sans engagement" },
               ].map(({ icon: Icon, text }) => (
                 <span
@@ -202,7 +205,7 @@ export default function CommandeEnLignePage() {
                 Une alternative rentable aux plateformes de livraison
               </h2>
               <p className="mx-auto mt-4 max-w-3xl text-muted-foreground leading-relaxed">
-                À Marseille, du Vieux-Port au quartier de La Timone, de nombreux restaurateurs voient leurs marges rognées par les applications de livraison tierces. En tant que{" "}
+                De nombreux restaurateurs voient leurs marges rognées par les applications de livraison tierces. En tant que{" "}
                 <Link href="/" className="text-accent underline underline-offset-4 hover:text-foreground">
                   développeur web et community manager à Marseille
                 </Link>
@@ -244,15 +247,15 @@ export default function CommandeEnLignePage() {
 
             <div className="rounded-2xl border border-border bg-card p-8">
               <h3 className="font-serif text-xl font-medium mb-4">
-                Accompagnement complet pour les restaurateurs marseillais
+                Accompagnement complet pour les restaurateurs
               </h3>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-accent shrink-0 mt-0.5" />
                   <span>
-                    Synchronisation avec votre offre de{" "}
+                    Synchronisation avec mon offre de{" "}
                     <Link href="/developpeur-web-marseille" className="text-accent hover:underline">
-                      création de site internet à Marseille
+                      création de site internet
                     </Link>{" "}
                     ou intégration directe sur votre site existant.
                   </span>
@@ -260,9 +263,9 @@ export default function CommandeEnLignePage() {
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-accent shrink-0 mt-0.5" />
                   <span>
-                    Collecte d'avis facilitée grâce à nos{" "}
+                    Collecte d&apos;avis facilitée grâce à mes{" "}
                     <Link href="/carte-nfc-avis-google-marseille" className="text-accent hover:underline">
-                      cartes NFC pour avis Google à Marseille
+                      cartes NFC pour avis Google
                     </Link>{" "}
                     posées sur votre comptoir.
                   </span>
@@ -270,7 +273,7 @@ export default function CommandeEnLignePage() {
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-accent shrink-0 mt-0.5" />
                   <span>
-                    Visibilité accrue sur les réseaux avec nos{" "}
+                    Visibilité accrue sur les réseaux avec mes{" "}
                     <Link href="/formules-reseaux-sociaux" className="text-accent hover:underline">
                       formules de community management pour Instagram et TikTok
                     </Link>
@@ -289,7 +292,7 @@ export default function CommandeEnLignePage() {
               Prêt à lancer votre commande en ligne sans commission ?
             </h2>
             <p className="mb-8 text-muted-foreground">
-              Contactez-moi pour étudier votre carte et vos besoins. Devis gratuit et échange personnalisé sans engagement.
+              Contactez-moi pour étudier votre carte et vos besoins. Devis gratuit et échange personnalisé sans engagement. Sur place dans le 13 ou à distance à l'international.
             </p>
             <Button size="lg" className="group px-8" asChild>
               <a href="/#contact">

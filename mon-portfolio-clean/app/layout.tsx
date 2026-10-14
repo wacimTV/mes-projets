@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "@/components/theme-provider";
+import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Wacim Ammouche",
   },
   description:
-    "Développeur web freelance et community manager à Marseille. Sites internet, e-commerce, commande en ligne et réseaux sociaux. Devis gratuit sous 24h.",
+    "Développeur web & community manager à Marseille. Sites internet, e-commerce, réseaux sociaux : sur place dans le 13 ou en visio à l'international. Devis gratuit.",
   authors: [{ name: "Wacim Ammouche", url: siteUrl }],
   creator: "Wacim Ammouche",
   alternates: {
@@ -36,17 +37,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Développeur Web & Community Manager à Marseille | Wacim Ammouche",
     description:
-      "Développeur web freelance et community manager à Marseille. Sites internet, e-commerce, commande en ligne et réseaux sociaux. Devis gratuit sous 24h.",
+      "Développeur web & community manager à Marseille. Sites internet, e-commerce, réseaux sociaux : sur place dans le 13 ou en visio à l'international. Devis gratuit.",
     type: "website",
     locale: "fr_FR",
     url: siteUrl,
     siteName: "Wacim Ammouche",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Développeur Web & Community Manager à Marseille | Wacim Ammouche",
+        url: DEFAULT_OG_IMAGE.url,
+        width: DEFAULT_OG_IMAGE.width,
+        height: DEFAULT_OG_IMAGE.height,
+        alt: DEFAULT_OG_IMAGE.alt,
       },
     ],
   },
@@ -54,8 +55,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Développeur Web & Community Manager à Marseille | Wacim Ammouche",
     description:
-      "Développeur web freelance et community manager à Marseille. Sites internet, e-commerce, commande en ligne et réseaux sociaux. Devis gratuit sous 24h.",
-    images: ["/og-image.jpg"],
+      "Développeur web & community manager à Marseille. Sites internet, e-commerce, réseaux sociaux : sur place dans le 13 ou en visio à l'international. Devis gratuit.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
   robots: {
     index: true,
@@ -75,14 +76,13 @@ function JsonLd() {
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Wacim Ammouche — Développeur Web & Community Manager à Marseille",
+    name: "Wacim Ammouche — Développeur Web & Community Manager",
     description:
-      "Développeur web freelance et community manager à Marseille. Sites internet, e-commerce, commande en ligne et réseaux sociaux. Devis gratuit sous 24h.",
+      "Développeur web freelance et community manager basé à Marseille. Sites internet, e-commerce, commande en ligne et réseaux sociaux : sur place dans les Bouches-du-Rhône ou à distance à l'international. Devis gratuit sous 24h.",
     url: siteUrl,
     email: "w.ammouche13@gmail.com",
     telephone: "+33782135483",
-    image: `${siteUrl}/og-image.jpg`,
-    priceRange: "€€",
+    image: `${siteUrl}${DEFAULT_OG_IMAGE.url}`,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Marseille",
@@ -98,6 +98,10 @@ function JsonLd() {
       {
         "@type": "AdministrativeArea",
         name: "Bouches-du-Rhône",
+      },
+      {
+        "@type": "Country",
+        name: "France",
       },
     ],
     geo: {
@@ -117,7 +121,7 @@ function JsonLd() {
           "@type": "Service",
           name: "Création de sites internet",
           description:
-            "Conception et développement de sites web modernes, rapides et optimisés SEO à Marseille.",
+            "Conception et développement de sites web modernes, rapides et optimisés SEO, sur place dans le 13 ou à distance à l'international.",
         },
       },
       {
@@ -135,7 +139,13 @@ function JsonLd() {
           "@type": "Service",
           name: "Community Management & Gestion des réseaux sociaux",
           description:
-            "Gestion des réseaux sociaux Instagram et TikTok à Marseille. Création de contenus et stratégie de communication digitale.",
+            "Gestion des réseaux sociaux Instagram et TikTok. Création de contenus et stratégie de communication digitale.",
+        },
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          price: "250",
+          priceCurrency: "EUR",
+          valueAddedTaxIncluded: true,
         },
       },
       {

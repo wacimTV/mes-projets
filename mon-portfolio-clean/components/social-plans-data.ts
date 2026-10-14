@@ -118,7 +118,7 @@ export const sectors: { icon: LucideIcon; label: string }[] = [
 export const faqs: { q: string; a: string }[] = [
   {
     q: "Quelle formule choisir pour mon entreprise ?",
-    a: "L'Essentielle convient pour commencer à communiquer régulièrement. La Standard permet de développer davantage votre visibilité, avec une séance photo/vidéo par mois et la gestion des messages. La Premium s'adresse aux entreprises qui souhaitent une communication plus soutenue. En cas de doute, demandez un devis gratuit : nous choisirons ensemble selon vos objectifs.",
+    a: "L'Essentielle convient pour commencer à communiquer régulièrement. La Standard permet de développer davantage votre visibilité, avec une séance photo/vidéo par mois et la gestion des messages. La Premium s'adresse aux entreprises qui souhaitent une communication plus soutenue. En cas de doute, demandez un devis gratuit : je vous orienterai selon vos objectifs.",
   },
   {
     q: "Dois-je fournir les photos et les vidéos ?",
@@ -126,7 +126,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Puis-je modifier ma formule plus tard ?",
-    a: "Oui, bien sûr ! Vous pouvez changer de formule à tout moment selon l’évolution de vos besoins et de votre activité. Nous trouverons ensemble l’offre la plus adaptée à vos objectifs.",
+    a: "Oui, bien sûr ! Vous pouvez changer de formule à tout moment selon l’évolution de vos besoins et de votre activité. Je vous conseillerai l’offre la plus adaptée à vos objectifs.",
   },
   {
     q: "Comment se déroule le premier mois ?",
@@ -138,7 +138,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Comment demander un devis ?",
-    a: "Cliquez sur « Demander un devis gratuit » ou sur le bouton d'une formule, puis remplissez le court formulaire. Le devis est gratuit et sans engagement, et je réponds sous 24 heures. Vous pouvez aussi m'écrire à w.ammouche13@gmail.com.",
+    a: "Cliquez sur « Demander un devis gratuit » ou sur le bouton d'une formule, puis remplissez le court formulaire. Le devis est gratuit et sans engagement, et je réponds sous 24 heures. Vous pouvez aussi me contacter directement via le formulaire de contact du site.",
   },
   {
     q: "Y a-t-il une durée d'engagement ?",
