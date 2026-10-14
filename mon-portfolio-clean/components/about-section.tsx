@@ -21,14 +21,14 @@ const experiences = [
     period: "2026 — actuel",
     role: "BTS CCST, conseil et commercialisation de solutions techniques",
     company: "Lycée rempart",
-    description: "étudiant en filière BTS CCST, conseil et commercialisation de solutions techniques.",
+    description: "Étudiant en filière BTS CCST, conseil et commercialisation de solutions techniques.",
   },
 
   {
     period: "2022 — 2025",
     role: "Bac STI2D spécialité système d'information et numérique",
     company: "Lycée Pasquet",
-    description: "étudiant en filière STI2D spécialité SIN.",
+    description: "Étudiant en filière STI2D spécialité SIN.",
   },
   {
     period: "2019 — actuel",
@@ -94,10 +94,10 @@ export function AboutSection() {
             </h2>
             <div className="space-y-3 text-muted-foreground">
               <p>
-                Basé à Marseille, je conçois des sites internet, des applications web et des solutions e-commerce soignées, rapides et optimisées pour le référencement. Mon approche associe rigueur technique et sens du détail, avec une attention constante portée à l&apos;expérience utilisateur.
+                Basé à Marseille, je conçois des sites internet, des applications web et des solutions e-commerce soignées, rapides et optimisées pour le référencement naturel. Mon approche associe rigueur technique et sens du détail, avec une attention constante portée à la performance et à l&apos;expérience utilisateur.
               </p>
               <p>
-                J&apos;accompagne les entreprises, les commerces et les indépendants des Bouches-du-Rhône — et partout en France — dans la création de leur site web et leur communication digitale, de la conception jusqu&apos;à la mise en ligne.
+                J&apos;accompagne les entreprises, commerces, restaurants et indépendants des Bouches-du-Rhône — et partout en France — dans la création de sites internet, le développement web sur-mesure et leur communication digitale.
               </p>
             </div>
 

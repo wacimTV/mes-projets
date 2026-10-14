@@ -11,10 +11,10 @@ const footerLinks = [
     links: [
       { name: "À Propos", href: "/#about" },
       { name: "Projets", href: "/#projects" },
-      { name: "Services", href: "/#services" },
-      { name: "Développeur Web Marseille", href: "/developpeur-web-marseille" },
-      { name: "Community Management", href: "/formules-reseaux-sociaux" },
-      { name: "Contact", href: "/#contact" },
+      { name: "Création Sites Internet", href: "/developpeur-web-marseille" },
+      { name: "Services & Solutions", href: "/#services" },
+      { name: "Community Manager Marseille", href: "/formules-reseaux-sociaux" },
+      { name: "Contact & Devis", href: "/#contact" },
     ],
   },
   {
@@ -52,7 +52,7 @@ export function Footer() {
               WA
             </a>
             <p className="mt-4 max-w-sm text-muted-foreground">
-              Développeur web freelance à Marseille. Création de sites internet, e-commerce, commandes en ligne et communication digitale dans les Bouches-du-Rhône.
+              Développeur web freelance à Marseille. Création de sites internet sur-mesure, applications web, e-commerce et gestion des réseaux sociaux dans les Bouches-du-Rhône.
             </p>
           </div>
 

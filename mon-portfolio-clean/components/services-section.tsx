@@ -8,16 +8,16 @@ import { Code, Palette, Zap, ArrowRight, FileImage, Share2, Wifi } from "lucide-
 const services = [
   {
     icon: Code,
-    title: "Développement Web",
+    title: "Création de Sites Internet",
     description:
-      "Création d'applications web rapides, évolutives et faciles à maintenir en utilisant les technologies modernes et les meilleures pratiques.",
-    features: ["Applications sur-mesure", "E-commerce & Boutiques", "Intégration de CMS", "Développement d'API"],
+      "Conception et développement de sites vitrines, e-commerce et applications web sur-mesure à Marseille. Des réalisations rapides, fluides sur mobile et optimisées pour le référencement naturel.",
+    features: ["Sites vitrines & corporate", "E-commerce & Boutiques", "Applications web sur-mesure", "Optimisation SEO & Performance"],
   },
   {
     icon: Palette,
-    title: "Mise a jour de sites web",
-    description: "Je mets à jour votre site web existant pour y ajouter les nouveautés.",
-    features: ["Ajout de pages", "Ajout de fonctionnalités", "Mise a jour des technologies", "Ajout de contenu"],
+    title: "Refonte & Mise à jour de sites",
+    description: "Modernisation de votre site internet existant, amélioration de la vitesse d'affichage, mise à jour des technologies et ajout de fonctionnalités.",
+    features: ["Refonte graphique & mobile-first", "Ajout de fonctionnalités", "Amélioration du référencement", "Maintenance & évolutions"],
   },
   {
     icon: Zap,
@@ -28,17 +28,17 @@ const services = [
   {
     icon: FileImage,
     title: "Création de Flyers",
-    description: "Un flyer efficace ne se contente pas d'être beau — il capte l'attention, transmet votre message et incite à l'action. Je conçois des flyers imprimé et digitaux qui donnent envie d'être lus.",
+    description: "Un flyer efficace ne se contente pas d'être beau — il capte l'attention, transmet votre message et incite à l'action. Je conçois des flyers imprimés et digitaux qui donnent envie d'être lus.",
     features: ["Flyers promotionnels & événementiels", "Restaurants, commerces & services", "Print-ready + version numérique", "Rendu professionnel, délai rapide"],
   },
   {
     icon: Share2,
-    title: "Communication Digitale",
+    title: "Community Management",
     href: "/formules-reseaux-sociaux",
-    linkLabel: "Découvrir le community management",
+    linkLabel: "Voir les formules Community Manager",
     description:
-      "Je vous aide à renforcer la présence en ligne de votre entreprise sur les réseaux sociaux et sur le web. De la stratégie à la publication, je prends en charge votre communication digitale pour toucher votre audience et booster votre visibilité.",
-    features: ["Gestion des réseaux sociaux", "Création de contenus visuels", "Stratégie de communication web", "Optimisation de la présence en ligne"],
+      "Gestion professionnelle de vos réseaux sociaux Instagram & TikTok à Marseille. De la création de contenus visuels à la publication, je valorise votre entreprise pour booster votre visibilité.",
+    features: ["Gestion des réseaux sociaux", "Création de contenus & visuels", "Stratégie de communication locale", "Formules mensuelles dès 250 €/mois"],
   },
   {
     icon: Wifi,
@@ -65,7 +65,7 @@ export function ServicesSection() {
           className="mb-16 text-center"
         >
           <span className="mb-4 inline-block text-sm font-medium uppercase tracking-widest text-accent">Ce que je fais</span>
-          <h2 className="font-serif text-4xl font-medium tracking-tight md:text-5xl">Services de Création Web et Communication Digitale à Marseille</h2>
+          <h2 className="font-serif text-4xl font-medium tracking-tight md:text-5xl">Création de Sites Internet &amp; Services Web à Marseille</h2>
         </motion.div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

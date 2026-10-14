@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     "développeur web freelance Marseille",
     "freelance développeur Marseille",
     "création site internet Marseille",
+    "création site web Marseille",
     "community manager Marseille",
-    "communication digitale Marseille",
-    "site web Marseille",
-    "création site e-commerce Marseille",
-    "commande en ligne restaurant Marseille",
-    "site vitrine Marseille",
-    "community management Marseille",
     "gestion réseaux sociaux Marseille",
+    "communication digitale Marseille",
+    "site internet restaurant Marseille",
+    "commande en ligne restaurant Marseille",
+    "création site e-commerce Marseille",
+    "site vitrine Marseille",
     "carte NFC avis Google",
     "QR Code avis Google",
     "développeur full-stack Marseille",
@@ -51,20 +51,28 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title:
-      "Wacim Ammouche — Développeur Web Freelance à Marseille",
+    title: "Wacim Ammouche — Développeur Web Freelance à Marseille",
     description:
       "Création de sites internet modernes, performants et optimisés SEO. Développeur web freelance à Marseille, disponible dans les Bouches-du-Rhône.",
     type: "website",
     locale: "fr_FR",
     url: siteUrl,
     siteName: "Wacim Ammouche — Développeur Web",
+    images: [
+      {
+        url: "/IMG_4611.jpeg",
+        width: 1400,
+        height: 1050,
+        alt: "Wacim Ammouche — Développeur Web Freelance à Marseille",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Wacim Ammouche — Développeur Web Freelance à Marseille",
     description:
-      "Création de sites internet, e-commerce et commande en ligne. Devis gratuit.",
+      "Création de sites internet, e-commerce et commande en ligne à Marseille. Devis gratuit.",
+    images: ["/IMG_4611.jpeg"],
   },
   robots: {
     index: true,
@@ -81,14 +89,23 @@ export const metadata: Metadata = {
 
 // JSON-LD Structured Data
 function JsonLd() {
-  const personSchema = {
+  const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "Wacim Ammouche — Développeur Web Freelance",
     description:
-      "Développeur web freelance à Marseille. Création de sites internet, applications web, e-commerce et commande en ligne pour restaurants et commerces.",
+      "Développeur web freelance à Marseille. Création de sites internet, applications web, e-commerce, commande en ligne et gestion des réseaux sociaux.",
     url: siteUrl,
     email: "w.ammouche13@gmail.com",
+    image: `${siteUrl}/IMG_4611.jpeg`,
+    priceRange: "€€",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Marseille",
+      postalCode: "13000",
+      addressRegion: "Bouches-du-Rhône",
+      addressCountry: "FR",
+    },
     areaServed: [
       {
         "@type": "City",
@@ -116,7 +133,7 @@ function JsonLd() {
           "@type": "Service",
           name: "Création de sites internet",
           description:
-            "Conception et développement de sites web modernes, rapides et optimisés SEO.",
+            "Conception et développement de sites web modernes, rapides et optimisés SEO à Marseille.",
         },
       },
       {
@@ -132,9 +149,9 @@ function JsonLd() {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Community Management",
+          name: "Community Management & Gestion des réseaux sociaux",
           description:
-            "Gestion des réseaux sociaux Instagram et TikTok. Création de contenus et stratégie de communication digitale.",
+            "Gestion des réseaux sociaux Instagram et TikTok à Marseille. Création de contenus et stratégie de communication digitale.",
         },
       },
       {
@@ -155,89 +172,23 @@ function JsonLd() {
     ],
   };
 
-  const websiteSchema = {
+  const webSiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Wacim Ammouche — Développeur Web Freelance à Marseille",
     url: siteUrl,
-    description:
-      "Développeur web freelance à Marseille. Création de sites internet, applications web, e-commerce et communication digitale.",
     inLanguage: "fr-FR",
-    publisher: {
-      "@type": "Person",
-      name: "Wacim Ammouche",
-    },
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Accueil",
-        item: siteUrl,
-      },
-    ],
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "En combien de temps recevez-vous une réponse ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Je réponds à chaque demande sous 24 heures, souvent bien plus tôt.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Proposez-vous un devis gratuit ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Oui, entièrement gratuit et sans engagement. Après analyse de votre projet, je vous transmets une proposition claire et détaillée.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Travaillez-vous à distance ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Absolument. Je collabore en visioconférence avec des clients partout en France.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Vous déplacez-vous chez vos clients ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Oui, je me déplace à Marseille, dans les communes voisines et dans l'ensemble des Bouches-du-Rhône (13).",
-        },
-      },
-    ],
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
       />
     </>
   );

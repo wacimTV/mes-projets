@@ -46,8 +46,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.9 }}
         >
-          Wacim Ammouche, développeur web freelance basé à Marseille. Je crée des sites internet sur-mesure, des e-commerces, des systèmes de commande en ligne et j&apos;accompagne les entreprises dans leur communication digitale — à Marseille, dans les Bouches-du-Rhône et partout en France.
-
+          Wacim Ammouche, développeur web freelance à Marseille. Création de sites internet sur-mesure, e-commerce, commande en ligne et gestion des réseaux sociaux pour commerces, restaurants et indépendants dans les Bouches-du-Rhône et partout en France.
         </motion.p>
 
         <motion.div
@@ -66,7 +65,7 @@ export function HeroSection() {
             <a href="#contact">Me contacter</a>
           </Button>
           <Button size="lg" variant="secondary" className="px-8" asChild>
-            <a href="/formules-reseaux-sociaux" id="hero-community-management">Community Management</a>
+            <a href="/formules-reseaux-sociaux" id="hero-community-management">Community Manager Marseille</a>
           </Button>
         </motion.div>
 

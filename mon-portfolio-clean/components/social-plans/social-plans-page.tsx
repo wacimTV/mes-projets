@@ -62,16 +62,21 @@ export function SocialPlansPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
               >
-                <span className="sp-eyebrow">Wacim Ammouche · Community Management</span>
+                <span className="sp-eyebrow">Wacim Ammouche · Community Manager Freelance à Marseille</span>
                 <h1 id="hero-title" className="mx-auto max-w-4xl">
-                  Développez votre <span className="sp-gold-text">visibilité</span> sur les réseaux sociaux
+                  Community Manager à Marseille &amp; <span className="sp-gold-text">Gestion des Réseaux Sociaux</span>
                 </h1>
                 <p className="sp-lead mx-auto mt-6 text-base md:text-lg">
-                  Des formules claires et efficaces pour faire grandir votre présence sur Instagram et TikTok. Je vous
-                  accompagne dans la création de contenus et la gestion de votre communication digitale pour vous
-                  permettre de vous concentrer sur votre activité.
+                  Des formules claires et sur-mesure pour développer votre visibilité sur Instagram et TikTok. Basé à Marseille, j&apos;accompagne les commerces, restaurants et entreprises dans la gestion de leurs réseaux sociaux, la création de contenus visuels et leur stratégie de communication digitale.
                 </p>
-                <div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+                <p className="mx-auto mt-3 text-xs text-muted-foreground">
+                  Besoin d&apos;un site web en parallèle ? Découvrez mes prestations de{" "}
+                  <a href="/#services" className="underline underline-offset-4 hover:text-foreground transition-colors">
+                    création de site internet à Marseille
+                  </a>
+                  .
+                </p>
+                <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
                   <a href="#formules" className="sp-btn sp-btn--gold">
                     Découvrir les formules <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </a>

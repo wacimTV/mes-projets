@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
@@ -19,8 +19,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/formules-reseaux-sociaux`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 0.8,
     },
   ]
 }
+
