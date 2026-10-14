@@ -69,6 +69,16 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 };
 
 // JSON-LD Structured Data
@@ -82,7 +92,8 @@ function JsonLd() {
     url: siteUrl,
     email: "w.ammouche13@gmail.com",
     telephone: "+33782135483",
-    image: `${siteUrl}${DEFAULT_OG_IMAGE.url}`,
+    image: `${siteUrl}/icon.png`,
+    logo: `${siteUrl}/icon.png`,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Marseille",

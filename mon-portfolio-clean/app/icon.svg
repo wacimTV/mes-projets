@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e131f"/>
+      <stop offset="100%" stop-color="#06080d"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#384358" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#182030" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background with smooth rounded squircle for modern aesthetics -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  <rect x="2" y="2" width="508" height="508" rx="110" fill="none" stroke="url(#borderGrad)" stroke-width="4"/>
+
+  <!-- Subtle glow accent in top-left -->
+  <circle cx="120" cy="120" r="140" fill="#38bdf8" opacity="0.06"/>
+  <circle cx="390" cy="390" r="160" fill="#f59e0b" opacity="0.04"/>
+
+  <!-- Monogram "WA" in high-contrast luxury serif -->
+  <text 
+    x="256" 
+    y="330" 
+    font-family="'Playfair Display', Georgia, 'Times New Roman', serif" 
+    font-size="240" 
+    font-weight="600" 
+    letter-spacing="-14" 
+    text-anchor="middle" 
+    fill="url(#textGrad)"
+    filter="url(#subtleShadow)"
+  >WA</text>
+</svg>

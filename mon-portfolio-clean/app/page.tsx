@@ -49,6 +49,7 @@ const websiteSchema = {
   alternateName: "Wacim Ammouche - Développeur Web & Community Manager",
   url: "https://www.wacimammouche.fr",
   inLanguage: "fr-FR",
+  image: "https://www.wacimammouche.fr/icon.png",
 }
 
 const personSchema = {
@@ -57,6 +58,7 @@ const personSchema = {
   name: "Wacim Ammouche",
   jobTitle: "Développeur web et community manager",
   url: "https://www.wacimammouche.fr",
+  image: "https://www.wacimammouche.fr/icon.png",
   sameAs: [
     "https://www.linkedin.com/in/wacim-ammouche-4a20031b1/",
     "https://www.instagram.com/wacim.digital/",
