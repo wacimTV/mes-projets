@@ -5,14 +5,16 @@ import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
+  display: "swap",
 });
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-geist-mono",
+  display: "swap",
 });
 
 const siteUrl = "https://www.wacimammouche.fr";
@@ -21,58 +23,39 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default:
-      "Wacim Ammouche — Développeur Web Freelance à Marseille | Création de Sites Internet",
+      "Développeur Web & Community Manager à Marseille | Wacim Ammouche",
     template: "%s | Wacim Ammouche",
   },
   description:
-    "Développeur web freelance à Marseille. Création de sites internet, applications web, e-commerce et commande en ligne pour restaurants et commerces. Devis gratuit.",
-  keywords: [
-    "développeur Marseille",
-    "développeur web Marseille",
-    "développeur web freelance Marseille",
-    "freelance développeur Marseille",
-    "création site internet Marseille",
-    "création site web Marseille",
-    "community manager Marseille",
-    "gestion réseaux sociaux Marseille",
-    "communication digitale Marseille",
-    "site internet restaurant Marseille",
-    "commande en ligne restaurant Marseille",
-    "création site e-commerce Marseille",
-    "site vitrine Marseille",
-    "carte NFC avis Google",
-    "QR Code avis Google",
-    "développeur full-stack Marseille",
-    "Bouches-du-Rhône",
-  ],
+    "Développeur web freelance et community manager à Marseille. Sites internet, e-commerce, commande en ligne et réseaux sociaux. Devis gratuit sous 24h.",
   authors: [{ name: "Wacim Ammouche", url: siteUrl }],
   creator: "Wacim Ammouche",
   alternates: {
-    canonical: "/",
+    canonical: siteUrl,
   },
   openGraph: {
-    title: "Wacim Ammouche — Développeur Web Freelance à Marseille",
+    title: "Développeur Web & Community Manager à Marseille | Wacim Ammouche",
     description:
-      "Création de sites internet modernes, performants et optimisés SEO. Développeur web freelance à Marseille, disponible dans les Bouches-du-Rhône.",
+      "Développeur web freelance et community manager à Marseille. Sites internet, e-commerce, commande en ligne et réseaux sociaux. Devis gratuit sous 24h.",
     type: "website",
     locale: "fr_FR",
     url: siteUrl,
-    siteName: "Wacim Ammouche — Développeur Web",
+    siteName: "Wacim Ammouche",
     images: [
       {
-        url: "/wacim-ammouche.jpg",
-        width: 1000,
-        height: 1333,
-        alt: "Wacim Ammouche — Développeur Web Freelance à Marseille",
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Développeur Web & Community Manager à Marseille | Wacim Ammouche",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wacim Ammouche — Développeur Web Freelance à Marseille",
+    title: "Développeur Web & Community Manager à Marseille | Wacim Ammouche",
     description:
-      "Création de sites internet, e-commerce et commande en ligne à Marseille. Devis gratuit.",
-    images: ["/wacim-ammouche.jpg"],
+      "Développeur web freelance et community manager à Marseille. Sites internet, e-commerce, commande en ligne et réseaux sociaux. Devis gratuit sous 24h.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -92,18 +75,19 @@ function JsonLd() {
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Wacim Ammouche — Développeur Web Freelance",
+    name: "Wacim Ammouche — Développeur Web & Community Manager à Marseille",
     description:
-      "Développeur web freelance à Marseille. Création de sites internet, applications web, e-commerce, commande en ligne et gestion des réseaux sociaux.",
+      "Développeur web freelance et community manager à Marseille. Sites internet, e-commerce, commande en ligne et réseaux sociaux. Devis gratuit sous 24h.",
     url: siteUrl,
     email: "w.ammouche13@gmail.com",
-    image: `${siteUrl}/wacim-ammouche.jpg`,
+    telephone: "+33782135483",
+    image: `${siteUrl}/og-image.jpg`,
     priceRange: "€€",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Marseille",
       postalCode: "13000",
-      addressRegion: "Bouches-du-Rhône",
+      addressRegion: "Provence-Alpes-Côte d'Azur",
       addressCountry: "FR",
     },
     areaServed: [
@@ -172,25 +156,11 @@ function JsonLd() {
     ],
   };
 
-  const webSiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Wacim Ammouche — Développeur Web Freelance à Marseille",
-    url: siteUrl,
-    inLanguage: "fr-FR",
-  };
-
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
-      />
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
+    />
   );
 }
 
@@ -206,6 +176,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${inter.variable} ${playfair.variable} ${geistMono.variable} font-sans antialiased`}
+        suppressHydrationWarning
       >
         <ThemeProvider
           attribute="class"

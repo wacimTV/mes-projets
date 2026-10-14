@@ -25,20 +25,30 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.5 }}
-          className="mb-6"
+          className="mb-4"
         >
+          <p className="text-sm font-medium uppercase tracking-widest text-accent">
+            Wacim Ammouche
+          </p>
         </motion.div>
 
         <motion.h1
-          className="mb-6 font-serif text-5xl font-medium leading-[1.1] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
+          className="mb-3 font-serif text-4xl font-medium leading-[1.15] tracking-tight sm:text-5xl md:text-6xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.7 }}
         >
-          <span className="block">Développeur Web Freelance à Marseille</span>
-          <span className="block text-gradient">Création de sites internet modernes et performants
-          </span>
+          Développeur web & Community Manager à Marseille
         </motion.h1>
+
+        <motion.p
+          className="mb-6 text-gradient font-serif text-xl font-medium sm:text-2xl"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.8 }}
+        >
+          Création de sites internet et gestion de réseaux sociaux
+        </motion.p>
 
         <motion.p
           className="mx-auto mb-10 max-w-xl text-lg text-muted-foreground md:text-xl"
@@ -46,7 +56,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.9 }}
         >
-          Wacim Ammouche, développeur web freelance à Marseille. Création de sites internet sur-mesure, e-commerce, commande en ligne et gestion des réseaux sociaux pour commerces, restaurants et indépendants dans les Bouches-du-Rhône et partout en France.
+          Je crée des sites rapides et bien référencés, et je gère l'Instagram et le TikTok des commerces, restaurants et indépendants de Marseille et des Bouches-du-Rhône. Devis gratuit sous 24h.
         </motion.p>
 
         <motion.div
@@ -55,17 +65,13 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2.1 }}
         >
-          <Button size="lg" className="group px-8" asChild>
-            <a href="#projects">
-              Voir mes projets
-              <ArrowDown className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
-            </a>
+          <Button size="lg" className="px-8" asChild>
+            <a href="#contact">Demander un devis gratuit</a>
           </Button>
           <Button size="lg" variant="outline" className="px-8 bg-transparent" asChild>
-            <a href="#contact">Me contacter</a>
-          </Button>
-          <Button size="lg" variant="secondary" className="px-8" asChild>
-            <a href="/formules-reseaux-sociaux" id="hero-community-management">Community Manager Marseille</a>
+            <a href="/formules-reseaux-sociaux" id="hero-community-management">
+              Voir mes formules Community Management
+            </a>
           </Button>
         </motion.div>
 

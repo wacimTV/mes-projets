@@ -6,16 +6,15 @@ import Image from "next/image"
 import { Award, Briefcase, Code2, Sparkles } from "lucide-react"
 
 const stats = [
-  { value: "8+", label: "Ans d'expérience", icon: Briefcase },
-
+  { value: "5+", label: "Ans d'expérience", icon: Briefcase },
 ]
 
 const experiences = [
   {
-    period: "Actuellement",
+    period: "2019 — actuel",
     role: "Créateur de sites web et communication digitale",
     company: "Indépendant",
-    description: "Création de sites web pour des clients et accompagnement des entreprises dans leur communication sur les réseaux sociaux.",
+    description: "Création de sites web optimisés pour des clients et accompagnement des entreprises dans leur communication sur les réseaux sociaux.",
   },
   {
     period: "2026 — actuel",
@@ -23,54 +22,11 @@ const experiences = [
     company: "Lycée rempart",
     description: "Étudiant en filière BTS CCST, conseil et commercialisation de solutions techniques.",
   },
-
-  {
-    period: "2022 — 2025",
-    role: "Bac STI2D spécialité système d'information et numérique",
-    company: "Lycée Pasquet",
-    description: "Étudiant en filière STI2D spécialité SIN.",
-  },
-  {
-    period: "2019 — actuel",
-    role: "Développeur Web & Mobile Full-Stack",
-    company: "Indépendant",
-    description: "Conception et développement de sites web et d'applications mobiles iOS & Android.",
-  },
-  {
-    period: "2026",
-    role: "Missions d'intérim",
-    company: "Haribo (Beaucaire) · Aéroport de Vatry",
-    description: "Missions d'intérim à l'usine Haribo de Beaucaire et à l'aéroport de Vatry.",
-  },
   {
     period: "2026",
     role: "Stage",
     company: "Rexel · Arles",
     description: "Stage en entreprise chez Rexel, à Arles.",
-  },
-  {
-    period: "2025",
-    role: "Équipier polyvalent",
-    company: "McDonald's",
-    description: "Poste d'équipier polyvalent en restauration rapide.",
-  },
-  {
-    period: "Juillet — août 2025",
-    role: "Animateur en centre aéré",
-    company: "Centre aéré",
-    description: "Animation auprès des enfants pendant la période estivale.",
-  },
-  {
-    period: "2024",
-    role: "Vendeur en marché alimentaire",
-    company: "Arles",
-    description: "Vente de produits alimentaires sur un marché, à Arles.",
-  },
-  {
-    period: "Décembre 2022",
-    role: "Stage",
-    company: "LERM",
-    description: "Stage en entreprise au sein du LERM.",
   },
 ]
 
@@ -94,7 +50,7 @@ export function AboutSection() {
             </h2>
             <div className="space-y-3 text-muted-foreground">
               <p>
-                Basé à Marseille, je conçois des sites internet, des applications web et des solutions e-commerce soignées, rapides et optimisées pour le référencement naturel. Mon approche associe rigueur technique et sens du détail, avec une attention constante portée à la performance et à l&apos;expérience utilisateur.
+                Je m&apos;appelle Wacim Ammouche. Basé à Marseille, je conçois des sites internet, des applications web et des solutions e-commerce soignées, rapides et optimisées pour le référencement naturel. Mon approche associe rigueur technique et sens du détail, avec une attention constante portée à la performance et à l&apos;expérience utilisateur.
               </p>
               <p>
                 J&apos;accompagne les entreprises, commerces, restaurants et indépendants des Bouches-du-Rhône — et partout en France — dans la création de sites internet, le développement web sur-mesure et leur communication digitale.

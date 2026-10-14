@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Community manager freelance à Marseille : gestion de vos réseaux sociaux Instagram & TikTok. Création de contenus, stratégie et formules dès 250 €/mois. Devis gratuit.",
   alternates: {
-    canonical: "/formules-reseaux-sociaux",
+    canonical: "https://www.wacimammouche.fr/formules-reseaux-sociaux",
   },
   openGraph: {
     title: "Community Manager Marseille & Gestion des Réseaux Sociaux | Wacim Ammouche",

@@ -6,6 +6,7 @@ import { motion, useInView, AnimatePresence } from "framer-motion"
 import { useRef, useState } from "react"
 import {
   Mail,
+  Phone,
   MapPin,
   Send,
   CheckCircle,
@@ -24,6 +25,18 @@ import { Label } from "@/components/ui/label"
 
 // ─── FAQ Data ────────────────────────────────────────────────────────────────
 const faqItems = [
+  {
+    q: "Quel est le prix d'un site internet pour un restaurant à Marseille ?",
+    a: "Le prix dépend de votre projet : site vitrine ou commande en ligne, nombre de pages, paiement en ligne, gestion des produits et des stocks. Je vous propose un devis gratuit, détaillé et sans engagement, sous 24h, après un échange sur vos besoins.",
+  },
+  {
+    q: "Quel est le délai de création d'un site web ?",
+    a: "En moyenne, comptez 1 à 3 semaines pour un site vitrine professionnel ou un site de restaurant après réception de vos contenus. Pour un projet e-commerce ou sur-mesure plus complexe, prévoyez entre 3 et 6 semaines.",
+  },
+  {
+    q: "Quelle est la différence entre un site vitrine et un site e-commerce ?",
+    a: "Un site vitrine présente votre activité, vos réalisations et vos coordonnées pour inciter vos visiteurs à vous contacter ou visiter votre établissement. Un site e-commerce intègre en plus un catalogue produit complet, un panier et le paiement sécurisé en ligne.",
+  },
   {
     q: "En combien de temps recevez-vous une réponse ?",
     a: "Je réponds à chaque demande sous 24 heures, souvent bien plus tôt. Vous ne resterez jamais sans nouvelles.",
@@ -78,20 +91,15 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
         </motion.span>
       </button>
 
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            key="faq-answer"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden"
-          >
-            <p className="pb-5 text-sm text-muted-foreground leading-relaxed">{a}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Toujours présent dans le HTML pour l'indexation SEO */}
+      <div
+        className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+          }`}
+      >
+        <div className="overflow-hidden">
+          <p className="pb-5 text-sm text-muted-foreground leading-relaxed">{a}</p>
+        </div>
+      </div>
     </motion.div>
   )
 }
@@ -201,6 +209,25 @@ export function ContactSection() {
                     className="font-medium transition-colors hover:text-accent"
                   >
                     w.ammouche13@gmail.com
+                  </a>
+                </div>
+              </motion.div>
+
+              {/* Téléphone */}
+              <motion.div
+                variants={itemVariants}
+                className="group flex items-center gap-4 rounded-xl p-3 -mx-3 transition-colors hover:bg-accent/5"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent/10 transition-colors group-hover:bg-accent/20">
+                  <Phone className="h-5 w-5 text-accent" />
+                </div>
+                <div>
+                  <div className="mb-0.5 text-xs font-medium uppercase tracking-wider text-muted-foreground">Téléphone</div>
+                  <a
+                    href="tel:+33782135483"
+                    className="font-medium transition-colors hover:text-accent"
+                  >
+                    07 82 13 54 83
                   </a>
                 </div>
               </motion.div>

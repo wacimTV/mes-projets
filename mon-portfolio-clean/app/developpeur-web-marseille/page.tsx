@@ -13,52 +13,72 @@ import {
   MapPin,
   Clock,
   BadgeCheck,
+  RefreshCw,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
-  title:
-    "Développeur Web Freelance à Marseille — Création de Sites Internet | Wacim Ammouche",
+  title: {
+    absolute:
+      "Création de site internet à Marseille | Développeur web freelance",
+  },
   description:
-    "Développeur web freelance à Marseille, je crée des sites internet sur-mesure, des e-commerces et des applications web pour entreprises, commerces et indépendants dans les Bouches-du-Rhône. Devis gratuit.",
-  alternates: { canonical: "/developpeur-web-marseille" },
+    "Création de sites vitrines, e-commerce et applications web à Marseille. Développeur web freelance, sites rapides et bien référencés. Devis gratuit sous 24h.",
+  alternates: {
+    canonical: "https://www.wacimammouche.fr/developpeur-web-marseille",
+  },
   openGraph: {
     title:
-      "Développeur Web Freelance à Marseille — Création de Sites Internet",
+      "Création de site internet à Marseille | Développeur web freelance",
     description:
-      "Création de sites internet modernes, performants et optimisés SEO à Marseille. Développeur web freelance disponible dans les Bouches-du-Rhône.",
+      "Création de sites vitrines, e-commerce et applications web à Marseille. Développeur web freelance, sites rapides et bien référencés. Devis gratuit sous 24h.",
     type: "website",
     locale: "fr_FR",
-    url: "/developpeur-web-marseille",
+    url: "https://www.wacimammouche.fr/developpeur-web-marseille",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Création de site internet à Marseille | Développeur web freelance",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Création de site internet à Marseille | Développeur web freelance",
+    description:
+      "Création de sites vitrines, e-commerce et applications web à Marseille. Développeur web freelance, sites rapides et bien référencés. Devis gratuit sous 24h.",
+    images: ["/og-image.jpg"],
   },
 }
 
 function PageJsonLd() {
   const serviceSchema = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Wacim Ammouche — Développeur Web Freelance à Marseille",
+    "@type": "Service",
+    name: "Création de site internet à Marseille",
     description:
-      "Développeur web freelance à Marseille. Création de sites internet sur-mesure, e-commerce, applications web et communication digitale pour entreprises et commerces des Bouches-du-Rhône.",
+      "Création de sites vitrines, e-commerce et applications web à Marseille. Développeur web freelance, sites rapides et bien référencés. Devis gratuit sous 24h.",
     url: "https://www.wacimammouche.fr/developpeur-web-marseille",
-    email: "w.ammouche13@gmail.com",
+    provider: {
+      "@type": "Person",
+      name: "Wacim Ammouche",
+      url: "https://www.wacimammouche.fr",
+    },
     areaServed: [
       { "@type": "City", name: "Marseille" },
       { "@type": "AdministrativeArea", name: "Bouches-du-Rhône" },
       { "@type": "AdministrativeArea", name: "Provence-Alpes-Côte d'Azur" },
     ],
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 43.2965,
-      longitude: 5.3698,
-    },
     knowsLanguage: ["fr", "en"],
     serviceType: [
       "Création de sites internet",
       "Développement web",
       "E-commerce",
-      "Community management",
-      "Communication digitale",
+      "Applications web",
+      "Refonte de sites web",
     ],
   }
 
@@ -75,7 +95,7 @@ function PageJsonLd() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Développeur Web Freelance à Marseille",
+        name: "Création de sites internet à Marseille",
         item: "https://www.wacimammouche.fr/developpeur-web-marseille",
       },
     ],
@@ -101,30 +121,48 @@ const services = [
     title: "Site vitrine",
     description:
       "Un site internet professionnel qui présente votre activité, vos services et vos coordonnées. Idéal pour gagner en visibilité à Marseille et dans les Bouches-du-Rhône.",
+    link: "/#contact",
+    linkText: "Demander un devis site vitrine",
   },
   {
     icon: ShoppingCart,
     title: "Site e-commerce",
     description:
       "Vendez vos produits en ligne avec une boutique rapide, sécurisée et facile à gérer. Paiement par carte bancaire intégré.",
+    link: "/#contact",
+    linkText: "Créer une boutique en ligne",
   },
   {
     icon: Smartphone,
-    title: "Commande en ligne",
+    title: "Commande en ligne restaurant",
     description:
-      "Permettez à vos clients de commander directement depuis votre site web. Solution adaptée aux restaurants, snacks, boulangeries et commerces alimentaires à Marseille.",
+      "Permettez à vos clients de commander directement depuis votre site web. Solution Click & Collect adaptée aux restaurants, snacks et commerces à Marseille.",
+    link: "/commande-en-ligne-restaurant-marseille",
+    linkText: "Découvrir la commande en ligne pour restaurant",
+  },
+  {
+    icon: RefreshCw,
+    title: "Refonte de site internet",
+    description:
+      "Modernisez votre site vieillissant : vitesse de chargement accrue, refonte graphique contemporaine et optimisation de votre référencement naturel à Marseille.",
+    link: "/refonte-site-internet-marseille",
+    linkText: "En savoir plus sur la refonte de site web",
+  },
+  {
+    icon: Zap,
+    title: "Community Management & Réseaux Sociaux",
+    description:
+      "Gestion de vos réseaux sociaux Instagram et TikTok, création de contenus et stratégie de visibilité en ligne pour développer votre audience locale.",
+    link: "/formules-reseaux-sociaux",
+    linkText: "Consulter nos formules de community management",
   },
   {
     icon: Code,
     title: "Application web sur-mesure",
     description:
-      "Développement d'applications web complexes et d'outils métier adaptés aux besoins spécifiques de votre entreprise.",
-  },
-  {
-    icon: Zap,
-    title: "Communication digitale",
-    description:
-      "Community management, gestion de vos réseaux sociaux Instagram et TikTok, création de contenus et stratégie de visibilité en ligne pour développer votre audience.",
+      "Développement d'applications web complexes et d'outils métier spécifiques bâtis avec Next.js, React et TypeScript.",
+    link: "/#contact",
+    linkText: "Étudier votre projet d'application web",
   },
 ]
 
@@ -161,21 +199,19 @@ export default function DeveloppeurWebMarseillePage() {
               </Link>
               <span aria-hidden="true">›</span>
               <span className="text-foreground">
-                Développeur Web Marseille
+                Création de sites internet
               </span>
             </nav>
 
             <h1 className="mb-6 font-serif text-4xl font-medium leading-[1.1] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-              <span className="block">Développeur Web Freelance</span>
+              <span className="block">Création de sites internet</span>
               <span className="block text-gradient">à Marseille</span>
             </h1>
 
             <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground md:text-xl">
-              Je suis Wacim Ammouche, développeur web freelance basé à
-              Marseille. Je conçois des sites internet sur-mesure, des
-              e-commerces et des solutions de commande en ligne pour les
-              entreprises, les commerces et les indépendants des
-              Bouches-du-Rhône.
+              Développeur web freelance basé à Marseille, je conçois des sites internet
+              sur-mesure, des boutiques e-commerce et des solutions web rapides,
+              soignées et optimisées pour le référencement naturel.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -191,7 +227,9 @@ export default function DeveloppeurWebMarseillePage() {
                 className="px-8 bg-transparent"
                 asChild
               >
-                <a href="/#projects">Voir mes réalisations</a>
+                <Link href="/refonte-site-internet-marseille">
+                  Découvrir la refonte de site
+                </Link>
               </Button>
             </div>
 
@@ -236,17 +274,26 @@ export default function DeveloppeurWebMarseillePage() {
               {services.map((service) => (
                 <div
                   key={service.title}
-                  className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:border-accent"
+                  className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:border-accent"
                 >
-                  <div className="mb-4 inline-flex rounded-xl bg-accent/10 p-3">
-                    <service.icon className="h-6 w-6 text-accent" />
+                  <div>
+                    <div className="mb-4 inline-flex rounded-xl bg-accent/10 p-3">
+                      <service.icon className="h-6 w-6 text-accent" />
+                    </div>
+                    <h3 className="mb-3 font-serif text-xl font-medium">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                      {service.description}
+                    </p>
                   </div>
-                  <h3 className="mb-3 font-serif text-xl font-medium">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
+                  <Link
+                    href={service.link}
+                    className="inline-flex items-center text-sm font-medium text-accent hover:underline mt-auto"
+                  >
+                    {service.linkText}
+                    <ArrowRight className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  </Link>
                 </div>
               ))}
             </div>
@@ -286,7 +333,14 @@ export default function DeveloppeurWebMarseillePage() {
               Vous cherchez un développeur web à Marseille&nbsp;?
             </h2>
             <p className="mb-8 text-muted-foreground">
-              Décrivez-moi votre projet et recevez un devis gratuit sous
+              Je m&apos;appelle{" "}
+              <Link
+                href="/"
+                className="font-medium text-foreground underline underline-offset-4 hover:text-accent transition-colors"
+              >
+                Wacim Ammouche
+              </Link>
+              , développeur web freelance à Marseille. Décrivez-moi votre projet et recevez un devis gratuit sous
               24h. Je me déplace à Marseille et dans les Bouches-du-Rhône
               pour les rendez-vous en personne.
             </p>

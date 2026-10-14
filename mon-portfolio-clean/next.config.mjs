@@ -6,6 +6,22 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "wacimammouche.fr" }],
+        destination: "https://www.wacimammouche.fr/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "wacim.ammouche.fr" }],
+        destination: "https://www.wacimammouche.fr/:path*",
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {

@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
+import Link from "next/link"
 import { motion, MotionConfig } from "framer-motion"
 import { ArrowRight, Check, Crown, Instagram, Star, Video } from "lucide-react"
 import {
@@ -62,7 +63,27 @@ export function SocialPlansPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
               >
-                <span className="sp-eyebrow">Wacim Ammouche · Community Manager Freelance à Marseille</span>
+                <nav
+                  aria-label="Fil d'Ariane"
+                  className="mb-6 flex items-center justify-center gap-2 text-sm text-muted-foreground"
+                >
+                  <Link
+                    href="/"
+                    className="transition-colors hover:text-foreground"
+                  >
+                    Accueil
+                  </Link>
+                  <span aria-hidden="true">›</span>
+                  <span className="text-foreground">
+                    Community Management
+                  </span>
+                </nav>
+                <span className="sp-eyebrow">
+                  <Link href="/" className="hover:underline transition-colors">
+                    Wacim Ammouche
+                  </Link>{" "}
+                  · Community Manager Freelance à Marseille
+                </span>
                 <h1 id="hero-title" className="mx-auto max-w-4xl">
                   Community Manager à Marseille &amp; <span className="sp-gold-text">Gestion des Réseaux Sociaux</span>
                 </h1>

@@ -9,6 +9,8 @@ const services = [
   {
     icon: Code,
     title: "Création de Sites Internet",
+    href: "/developpeur-web-marseille",
+    linkLabel: "Découvrir la création de sites internet",
     description:
       "Conception et développement de sites vitrines, e-commerce et applications web sur-mesure à Marseille. Des réalisations rapides, fluides sur mobile et optimisées pour le référencement naturel.",
     features: ["Sites vitrines & corporate", "E-commerce & Boutiques", "Applications web sur-mesure", "Optimisation SEO & Performance"],
@@ -16,18 +18,24 @@ const services = [
   {
     icon: Palette,
     title: "Refonte & Mise à jour de sites",
+    href: "/refonte-site-internet-marseille",
+    linkLabel: "En savoir plus sur la refonte de site",
     description: "Modernisation de votre site internet existant, amélioration de la vitesse d'affichage, mise à jour des technologies et ajout de fonctionnalités.",
     features: ["Refonte graphique & mobile-first", "Ajout de fonctionnalités", "Amélioration du référencement", "Maintenance & évolutions"],
   },
   {
     icon: Zap,
     title: "Prise de commandes en ligne",
-    description: "Permettez à vos clients de commander directement depuis votre site web grâce à un système de commande simple, rapide et sécurisé. Idéal pour les restaurants, snacks, boulangeries, boucheries, commerces alimentaires et bien d'autres.",
+    href: "/commande-en-ligne-restaurant-marseille",
+    linkLabel: "Découvrir la commande en ligne restaurant",
+    description: "Permettez à vos clients de commander directement depuis votre site web grâce à un système de commande simple, rapide et sécurisé. Idéal pour les restaurants, snacks, boulangeries et commerces à Marseille.",
     features: ["Commande en ligne 24h/24", "Paiement sécurisé par CB", "Gestion des produits et des stocks", "Notifications automatiques des commandes"],
   },
   {
     icon: FileImage,
     title: "Création de Flyers",
+    href: "/#contact",
+    linkLabel: "Demander un devis pour vos flyers",
     description: "Un flyer efficace ne se contente pas d'être beau — il capte l'attention, transmet votre message et incite à l'action. Je conçois des flyers imprimés et digitaux qui donnent envie d'être lus.",
     features: ["Flyers promotionnels & événementiels", "Restaurants, commerces & services", "Print-ready + version numérique", "Rendu professionnel, délai rapide"],
   },
@@ -43,6 +51,8 @@ const services = [
   {
     icon: Wifi,
     title: "Carte NFC & QR Code — Avis Google",
+    href: "/carte-nfc-avis-google-marseille",
+    linkLabel: "Découvrir les cartes NFC Avis Google",
     price: "À partir de 50€ TTC",
     description:
       "Transformez chaque client satisfait en nouvel avis Google grâce à une carte NFC & QR Code simple, rapide et efficace. Idéal pour les commerces, restaurants, salons et artisans. Configuration, test et mise en service inclus.",
@@ -112,7 +122,11 @@ export function ServicesSection() {
                 {"href" in service && service.href && (
                   <Link
                     href={service.href}
-                    className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[oklch(0.8_0.125_85)] px-5 py-3 text-sm font-semibold text-[oklch(0.14_0.01_85)] shadow-lg shadow-[oklch(0.8_0.125_85/0.35)] ring-1 ring-[oklch(0.8_0.125_85/0.6)] transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-[oklch(0.8_0.125_85/0.5)]"
+                    className={
+                      service.title === "Community Management"
+                        ? "mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[oklch(0.8_0.125_85)] px-5 py-3 text-sm font-semibold text-[oklch(0.14_0.01_85)] shadow-lg shadow-[oklch(0.8_0.125_85/0.35)] ring-1 ring-[oklch(0.8_0.125_85/0.6)] transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-[oklch(0.8_0.125_85/0.5)]"
+                        : "mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border/80 bg-secondary/50 px-5 py-2.5 text-sm font-medium transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
+                    }
                   >
                     {service.linkLabel}
                     <ArrowRight className="h-4 w-4" />

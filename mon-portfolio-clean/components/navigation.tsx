@@ -7,10 +7,12 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 
 const navItems = [
-  { name: "À Propos", href: "/#about" },
-  { name: "Projets", href: "/#projects" },
-  { name: "Services", href: "/#services" },
+  { name: "Accueil", href: "/" },
+  { name: "Création Sites Internet", href: "/developpeur-web-marseille" },
   { name: "Community Management", href: "/formules-reseaux-sociaux", highlight: true },
+  { name: "Projets", href: "/#projects" },
+  { name: "À Propos", href: "/#about" },
+  { name: "Services", href: "/#services" },
   { name: "Contact", href: "/#contact" },
 ]
 

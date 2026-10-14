@@ -9,7 +9,7 @@ export function ProjectsSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="projects" className="relative py-32 px-6 bg-secondary/30" ref={ref}>
+    <section id="projects" className="relative py-32 px-6 bg-secondary/30" ref={ref} aria-label="Sélection de projets">
       <div className="mx-auto max-w-7xl">
 
         {/* Header */}
