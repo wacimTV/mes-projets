@@ -157,10 +157,10 @@ export function AboutSection() {
               className="mt-12 overflow-hidden rounded-2xl bg-secondary"
             >
               <Image
-                src="/IMG_4611.jpeg"
+                src="/wacim-ammouche.jpg"
                 alt="Wacim Ammouche, développeur web freelance à Marseille"
                 width={600}
-                height={750}
+                height={800}
                 className="w-full rounded-2xl"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority={false}

@@ -60,9 +60,9 @@ export const metadata: Metadata = {
     siteName: "Wacim Ammouche — Développeur Web",
     images: [
       {
-        url: "/IMG_4611.jpeg",
-        width: 1400,
-        height: 1050,
+        url: "/wacim-ammouche.jpg",
+        width: 1000,
+        height: 1333,
         alt: "Wacim Ammouche — Développeur Web Freelance à Marseille",
       },
     ],
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     title: "Wacim Ammouche — Développeur Web Freelance à Marseille",
     description:
       "Création de sites internet, e-commerce et commande en ligne à Marseille. Devis gratuit.",
-    images: ["/IMG_4611.jpeg"],
+    images: ["/wacim-ammouche.jpg"],
   },
   robots: {
     index: true,
@@ -97,7 +97,7 @@ function JsonLd() {
       "Développeur web freelance à Marseille. Création de sites internet, applications web, e-commerce, commande en ligne et gestion des réseaux sociaux.",
     url: siteUrl,
     email: "w.ammouche13@gmail.com",
-    image: `${siteUrl}/IMG_4611.jpeg`,
+    image: `${siteUrl}/wacim-ammouche.jpg`,
     priceRange: "€€",
     address: {
       "@type": "PostalAddress",

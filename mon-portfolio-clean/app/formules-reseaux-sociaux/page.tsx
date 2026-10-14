@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     url: "https://www.wacimammouche.fr/formules-reseaux-sociaux",
     images: [
       {
-        url: "/IMG_4611.jpeg",
-        width: 1400,
-        height: 1050,
+        url: "/wacim-ammouche.jpg",
+        width: 1000,
+        height: 1333,
         alt: "Community Manager à Marseille - Wacim Ammouche",
       },
     ],
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Community Manager Marseille & Gestion des Réseaux Sociaux",
     description:
       "Formules de community management à Marseille pour Instagram & TikTok dès 250 €/mois. Devis gratuit sous 24h.",
-    images: ["/IMG_4611.jpeg"],
+    images: ["/wacim-ammouche.jpg"],
   },
 }
 
