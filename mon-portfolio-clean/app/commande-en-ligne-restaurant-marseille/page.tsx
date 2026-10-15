@@ -14,19 +14,20 @@ import {
   ShieldCheck,
   CheckCircle,
   Globe,
+  CalendarCheck,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { DEFAULT_OG_IMAGE } from "@/lib/seo"
 
 export const metadata: Metadata = {
-  title: "Commande en Ligne pour Restaurant à Marseille | Click & Collect",
+  title: "Commande & Réservation en Ligne Directe | Restaurants & Entreprises",
   description:
-    "Solution de commande en ligne et Click & Collect pour restaurants à Marseille. Réduisez les commissions des plateformes et fidélisez vos clients. Devis gratuit sous 24h.",
+    "Solution de commande en ligne et réservation directe sur le site pour restaurants et toutes entreprises. Zéro commission, Click & Collect et réservations 24h/24. Devis gratuit.",
   alternates: { canonical: "https://www.wacimammouche.fr/commande-en-ligne-restaurant-marseille" },
   openGraph: {
-    title: "Commande en Ligne pour Restaurant à Marseille | Solution Sans Commission",
+    title: "Commande & Réservation en Ligne Directe | Solution Sans Commission",
     description:
-      "Installez votre propre système de commande en ligne pour votre restaurant. Click & collect direct, paiement sécurisé et zéro intermédiaire.",
+      "Installez votre propre système de commande en ligne et de réservation directe sur votre site. Pour restaurants et toutes entreprises. Paiement sécurisé et zéro intermédiaire.",
     type: "website",
     locale: "fr_FR",
     url: "https://www.wacimammouche.fr/commande-en-ligne-restaurant-marseille",
@@ -41,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Commande en Ligne pour Restaurant à Marseille",
+    title: "Commande & Réservation en Ligne Directe pour Entreprises",
     description:
-      "Système de commande Click & Collect sur-mesure pour restaurateurs. Devis gratuit sous 24h.",
+      "Système de commande Click & Collect et réservation directe sur le site pour restaurants et toutes entreprises. Devis gratuit sous 24h.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 }
@@ -52,9 +53,9 @@ function PageJsonLd() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Commande en ligne et Click & Collect pour restaurant à Marseille",
+    name: "Commande en ligne et réservation directe sur le site pour restaurants et entreprises",
     description:
-      "Mise en place d'un système de commande en ligne direct pour restaurants, snacks et commerces de bouche, sur place dans les Bouches-du-Rhône ou à distance à l'international.",
+      "Mise en place d'un système de commande en ligne direct et de réservation sur le site pour restaurants, commerces et toutes les entreprises, sur place dans les Bouches-du-Rhône ou à distance à l'international.",
     provider: {
       "@type": "ProfessionalService",
       name: "Wacim Ammouche",
@@ -103,27 +104,39 @@ function PageJsonLd() {
 const keyBenefits = [
   {
     icon: TrendingUp,
-    title: "Zéro commission sur vos commandes",
+    title: "Zéro commission sur vos commandes et réservations",
     description:
-      "Contrairement aux plateformes qui prélèvent jusqu'à 30% sur chaque commande, vous conservez l'intégralité de votre chiffre d'affaires et valorisez votre travail.",
+      "Contrairement aux plateformes qui prélèvent jusqu'à 30% sur chaque commande ou réservation, vous conservez l'intégralité de vos revenus et valorisez votre travail.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Réservation directe pour toutes les entreprises",
+    description:
+      "Vos clients peuvent faire des réservations directement sur votre site web : tables de restaurant, créneaux horaires, soins ou prestations pour toute entreprise.",
   },
   {
     icon: Smartphone,
     title: "Expérience fluide sur smartphone",
     description:
-      "Une interface web intuitive sans obligation d'installer une application lourde : vos clients commandent en quelques secondes en Click & Collect.",
+      "Une interface web intuitive sans obligation d'installer une application : vos clients commandent en Click & Collect ou réservent en quelques secondes.",
   },
   {
     icon: CreditCard,
     title: "Paiement en ligne sécurisé ou sur place",
     description:
-      "Offrez le choix à vos clients : paiement en ligne par carte bancaire ou règlement au comptoir lors du retrait de leur repas.",
+      "Offrez le choix à vos clients : paiement en ligne par carte bancaire ou règlement au comptoir lors du retrait de leur commande ou du rendez-vous.",
   },
   {
     icon: Utensils,
-    title: "Gestion facile de votre carte et menus",
+    title: "Gestion facile de vos produits, menus et créneaux",
     description:
-      "Modifiez vos plats du jour, formules midi, options de cuisson ou ruptures de stock en quelques clics depuis une interface d'administration claire.",
+      "Modifiez vos plats, formules, services, disponibilités ou ruptures de stock en quelques clics depuis une interface d'administration claire.",
+  },
+  {
+    icon: Clock,
+    title: "Notifications instantanées et gain de temps",
+    description:
+      "Chaque commande et réservation arrive instantanément sur votre tableau de bord, vous évitant les interruptions téléphoniques en plein service.",
   },
 ]
 
@@ -145,19 +158,19 @@ export default function CommandeEnLignePage() {
                 Accueil
               </Link>
               <span aria-hidden="true">›</span>
-              <span className="text-foreground">Commande en ligne restaurant</span>
+              <span className="text-foreground">Commande & Réservation en ligne</span>
             </nav>
 
             <span className="mb-4 inline-block text-sm font-medium uppercase tracking-widest text-accent">
-              Restauration & Commerces de bouche
+              Restaurants, Commerces & Entreprises
             </span>
 
             <h1 className="mb-6 font-serif text-4xl font-medium leading-[1.15] tracking-tight sm:text-5xl md:text-6xl">
-              Commande en Ligne pour Restaurants à Marseille
+              Commande en Ligne & Réservation Directe sur le Site
             </h1>
 
             <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground md:text-xl leading-relaxed">
-              Propulsez votre établissement avec une solution de Click & Collect rapide, élégante et sans commission par commande. Reprenez le contrôle direct de votre fichier client et de votre rentabilité. Sur place dans le 13 ou à distance à l'international.
+              Propulsez votre établissement avec une solution de Click & Collect et de réservation directe sur votre site internet, rapide, élégante et sans commission. Vos clients peuvent passer commande ou faire des réservations directement en ligne pour toutes les entreprises. Sur place dans le 13 ou à distance à l'international.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -202,14 +215,14 @@ export default function CommandeEnLignePage() {
                 Pourquoi installer votre propre système ?
               </span>
               <h2 className="font-serif text-3xl font-medium tracking-tight md:text-4xl">
-                Une alternative rentable aux plateformes de livraison
+                Une alternative rentable aux plateformes intermédiaires
               </h2>
               <p className="mx-auto mt-4 max-w-3xl text-muted-foreground leading-relaxed">
-                De nombreux restaurateurs voient leurs marges rognées par les applications de livraison tierces. En tant que{" "}
+                De nombreux professionnels et restaurateurs voient leurs marges rognées par les commissions des plateformes tierces. En tant que{" "}
                 <Link href="/" className="text-accent underline underline-offset-4 hover:text-foreground">
                   développeur web et community manager à Marseille
                 </Link>
-                , je conçois des plateformes de commande en ligne dédiées qui appartiennent à 100% à votre établissement.
+                , je conçois des solutions de commande en ligne et de réservation directe qui appartiennent à 100% à votre entreprise.
               </p>
             </div>
 
@@ -235,19 +248,22 @@ export default function CommandeEnLignePage() {
           <div className="mx-auto max-w-4xl space-y-12">
             <div>
               <h2 className="font-serif text-2xl font-medium md:text-3xl mb-4">
-                Comment fonctionne la commande Click & Collect pour votre restaurant ?
+                Comment fonctionnent la commande et la réservation directe sur votre site ?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Vos clients scannent votre QR code en salle ou accèdent directement à votre adresse web depuis leur smartphone. Ils sélectionnent leurs entrées, plats, formules midi et boissons, choisissent leur créneau de retrait souhaité et règlent en toute simplicité.
+                Vos clients scannent votre QR code ou accèdent directement à votre site internet depuis leur smartphone ou ordinateur. Ils peuvent passer commande en Click & Collect en quelques instants ou effectuer une réservation directement sur le site en choisissant leur créneau et leurs options.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Cette fonctionnalité de réservation directe sur le site est conçue pour toutes les entreprises : réservation de tables pour restaurants et brasseries, mais également prise de rendez-vous et réservation de créneaux pour salons, instituts, artisans, prestataires de services et professionnels indépendants.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                De votre côté, chaque commande arrive instantanément sur votre tablette, téléphone ou imprimante de caisse thermique. Vous gagnez du temps au standard téléphonique pendant les heures de coup de feu et éliminez les erreurs de commande.
+                De votre côté, chaque commande ou réservation arrive instantanément sur votre tableau de bord, smartphone ou boîte mail. Vous gagnez un temps précieux au téléphone pendant vos heures d&apos;activité et éliminez tout risque d&apos;erreur.
               </p>
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8">
               <h3 className="font-serif text-xl font-medium mb-4">
-                Accompagnement complet pour les restaurateurs
+                Accompagnement complet pour les restaurateurs & entreprises
               </h3>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">

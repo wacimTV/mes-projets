@@ -22,7 +22,7 @@ const footerLinks = [
     links: [
       { name: "Création Sites Internet", href: "/developpeur-web-marseille" },
       { name: "Community Management Marseille", href: "/community-management" },
-      { name: "Commande en Ligne Restaurant", href: "/commande-en-ligne-restaurant-marseille" },
+      { name: "Commande & Réservation en Ligne", href: "/commande-en-ligne-restaurant-marseille" },
       { name: "Refonte de Site Internet", href: "/refonte-site-internet-marseille" },
       { name: "Carte NFC Avis Google", href: "/carte-nfc-avis-google-marseille" },
     ],

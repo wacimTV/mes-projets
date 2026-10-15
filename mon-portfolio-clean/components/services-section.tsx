@@ -25,11 +25,16 @@ const services = [
   },
   {
     icon: Zap,
-    title: "Prise de commandes en ligne",
+    title: "Commande & Réservation en ligne",
     href: "/commande-en-ligne-restaurant-marseille",
-    linkLabel: "Découvrir la commande en ligne restaurant",
-    description: "Permettez à vos clients de commander directement depuis votre site web grâce à un système de commande simple, rapide et sécurisé. Idéal pour les restaurants, snacks, boulangeries et commerces.",
-    features: ["Commande en ligne 24h/24", "Paiement sécurisé par CB", "Gestion des produits et des stocks", "Notifications automatiques des commandes"],
+    linkLabel: "Découvrir la commande et réservation en ligne",
+    description: "Permettez à vos clients de commander ou de faire des réservations directement sur votre site web. Idéal pour les restaurants, commerces et toutes les entreprises souhaitant gérer leurs commandes et rendez-vous sans intermédiaire.",
+    features: [
+      "Réservation directe sur le site pour toutes les entreprises",
+      "Commande en ligne 24h/24 & Click and Collect",
+      "Paiement sécurisé par CB ou sur place",
+      "Gestion des créneaux, stocks & notifications automatiques",
+    ],
   },
   {
     icon: FileImage,

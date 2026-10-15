@@ -188,11 +188,11 @@ const services = [
   },
   {
     icon: Smartphone,
-    title: "Commande en ligne restaurant",
+    title: "Commande & Réservation en ligne",
     description:
-      "Permettez à vos clients de commander directement depuis votre site web. Solution Click & Collect adaptée aux restaurants, snacks et commerces.",
+      "Permettez à vos clients de commander ou de faire des réservations directement sur votre site web. Une solution sans intermédiaire idéale pour les restaurants et toutes les entreprises.",
     link: "/commande-en-ligne-restaurant-marseille",
-    linkText: "Découvrir la commande en ligne pour restaurant",
+    linkText: "Découvrir la commande et réservation en ligne",
   },
   {
     icon: RefreshCw,

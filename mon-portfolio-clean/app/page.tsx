@@ -79,7 +79,7 @@ const homeFaqSchema = {
       name: "Quel est le prix d'un site internet pour un restaurant à Marseille ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Le prix dépend de votre projet : site vitrine ou commande en ligne, nombre de pages, paiement en ligne, gestion des produits et des stocks. Je vous propose un devis gratuit, détaillé et sans engagement, sous 24h, après un échange sur vos besoins.",
+        text: "Le prix dépend de votre projet : site vitrine, commande ou réservation en ligne directe, nombre de pages, paiement en ligne, gestion des produits et des créneaux. Je vous propose un devis gratuit, détaillé et sans engagement, sous 24h, après un échange sur vos besoins.",
       },
     },
     {

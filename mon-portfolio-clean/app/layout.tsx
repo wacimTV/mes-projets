@@ -139,9 +139,9 @@ function JsonLd() {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Commande en ligne pour restaurants et commerces",
+          name: "Commande et réservation en ligne pour restaurants et entreprises",
           description:
-            "Système de commande en ligne sécurisé pour restaurants, snacks, boulangeries et commerces alimentaires.",
+            "Système de commande en ligne et de réservation directe sur le site pour restaurants, commerces et toutes les entreprises.",
         },
       },
       {
