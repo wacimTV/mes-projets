@@ -241,7 +241,7 @@ export default function RefonteSiteMarseillePage() {
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 C&apos;est également l&apos;occasion idéale d&apos;ajouter de nouvelles fonctionnalités à forte valeur ajoutée, comme un module de{" "}
-                <Link href="/commande-en-ligne-restaurant-marseille" className="text-accent hover:underline">
+                <Link href="/commande-en-ligne-reservation" className="text-accent hover:underline">
                   commande et réservation directe en ligne
                 </Link>{" "}
                 ou une intégration avec votre stratégie de{" "}

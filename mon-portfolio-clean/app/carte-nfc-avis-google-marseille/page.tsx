@@ -237,7 +237,7 @@ export default function CarteNfcPage() {
                   <CheckCircle className="h-5 w-5 text-accent shrink-0 mt-0.5" />
                   <span>
                     Proposez la commande et réservation directe sur mobile avec mon module de{" "}
-                    <Link href="/commande-en-ligne-restaurant-marseille" className="text-accent hover:underline">
+                    <Link href="/commande-en-ligne-reservation" className="text-accent hover:underline">
                       commande et réservation en ligne
                     </Link>
                     .

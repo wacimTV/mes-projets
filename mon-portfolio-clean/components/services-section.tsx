@@ -26,7 +26,7 @@ const services = [
   {
     icon: Zap,
     title: "Commande & Réservation en ligne",
-    href: "/commande-en-ligne-restaurant-marseille",
+    href: "/commande-en-ligne-reservation",
     linkLabel: "Découvrir la commande et réservation en ligne",
     description: "Permettez à vos clients de commander ou de faire des réservations directement sur votre site web. Idéal pour les restaurants, commerces et toutes les entreprises souhaitant gérer leurs commandes et rendez-vous sans intermédiaire.",
     features: [

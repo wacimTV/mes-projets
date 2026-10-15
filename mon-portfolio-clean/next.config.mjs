@@ -25,6 +25,11 @@ const nextConfig = {
         destination: "/community-management",
         permanent: true,
       },
+      {
+        source: "/commande-en-ligne-restaurant-marseille",
+        destination: "/commande-en-ligne-reservation",
+        permanent: true,
+      },
     ]
   },
   async headers() {

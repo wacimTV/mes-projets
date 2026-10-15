@@ -191,7 +191,7 @@ const services = [
     title: "Commande & Réservation en ligne",
     description:
       "Permettez à vos clients de commander ou de faire des réservations directement sur votre site web. Une solution sans intermédiaire idéale pour les restaurants et toutes les entreprises.",
-    link: "/commande-en-ligne-restaurant-marseille",
+    link: "/commande-en-ligne-reservation",
     linkText: "Découvrir la commande et réservation en ligne",
   },
   {
